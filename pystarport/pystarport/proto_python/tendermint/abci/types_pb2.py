@@ -26,7 +26,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z+github.com/tendermint/tendermint/abci/types',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1btendermint/abci/types.proto\x12\x0ftendermint.abci\x1a\x1dtendermint/crypto/proof.proto\x1a\x1ctendermint/types/types.proto\x1a\x1ctendermint/crypto/keys.proto\x1a\x1dtendermint/types/params.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x14gogoproto/gogo.proto\"\xea\x06\n\x07Request\x12,\n\x04\x65\x63ho\x18\x01 \x01(\x0b\x32\x1c.tendermint.abci.RequestEchoH\x00\x12.\n\x05\x66lush\x18\x02 \x01(\x0b\x32\x1d.tendermint.abci.RequestFlushH\x00\x12,\n\x04info\x18\x03 \x01(\x0b\x32\x1c.tendermint.abci.RequestInfoH\x00\x12\x37\n\nset_option\x18\x04 \x01(\x0b\x32!.tendermint.abci.RequestSetOptionH\x00\x12\x37\n\ninit_chain\x18\x05 \x01(\x0b\x32!.tendermint.abci.RequestInitChainH\x00\x12.\n\x05query\x18\x06 \x01(\x0b\x32\x1d.tendermint.abci.RequestQueryH\x00\x12\x39\n\x0b\x62\x65gin_block\x18\x07 \x01(\x0b\x32\".tendermint.abci.RequestBeginBlockH\x00\x12\x33\n\x08\x63heck_tx\x18\x08 \x01(\x0b\x32\x1f.tendermint.abci.RequestCheckTxH\x00\x12\x37\n\ndeliver_tx\x18\t \x01(\x0b\x32!.tendermint.abci.RequestDeliverTxH\x00\x12\x35\n\tend_block\x18\n \x01(\x0b\x32 .tendermint.abci.RequestEndBlockH\x00\x12\x30\n\x06\x63ommit\x18\x0b \x01(\x0b\x32\x1e.tendermint.abci.RequestCommitH\x00\x12?\n\x0elist_snapshots\x18\x0c \x01(\x0b\x32%.tendermint.abci.RequestListSnapshotsH\x00\x12?\n\x0eoffer_snapshot\x18\r \x01(\x0b\x32%.tendermint.abci.RequestOfferSnapshotH\x00\x12H\n\x13load_snapshot_chunk\x18\x0e \x01(\x0b\x32).tendermint.abci.RequestLoadSnapshotChunkH\x00\x12J\n\x14\x61pply_snapshot_chunk\x18\x0f \x01(\x0b\x32*.tendermint.abci.RequestApplySnapshotChunkH\x00\x42\x07\n\x05value\"\x1e\n\x0bRequestEcho\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x0e\n\x0cRequestFlush\"J\n\x0bRequestInfo\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x15\n\rblock_version\x18\x02 \x01(\x04\x12\x13\n\x0bp2p_version\x18\x03 \x01(\x04\".\n\x10RequestSetOption\x12\x0b\n\x03key\x18\x01 \x01(\t\x12\r\n\x05value\x18\x02 \x01(\t\"\x81\x02\n\x10RequestInitChain\x12\x32\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x12\x10\n\x08\x63hain_id\x18\x02 \x01(\t\x12:\n\x10\x63onsensus_params\x18\x03 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12:\n\nvalidators\x18\x04 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x17\n\x0f\x61pp_state_bytes\x18\x05 \x01(\x0c\x12\x16\n\x0einitial_height\x18\x06 \x01(\x03\"I\n\x0cRequestQuery\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x0e\n\x06height\x18\x03 \x01(\x03\x12\r\n\x05prove\x18\x04 \x01(\x08\"\xd1\x01\n\x11RequestBeginBlock\x12\x0c\n\x04hash\x18\x01 \x01(\x0c\x12.\n\x06header\x18\x02 \x01(\x0b\x32\x18.tendermint.types.HeaderB\x04\xc8\xde\x1f\x00\x12?\n\x10last_commit_info\x18\x03 \x01(\x0b\x32\x1f.tendermint.abci.LastCommitInfoB\x04\xc8\xde\x1f\x00\x12=\n\x14\x62yzantine_validators\x18\x04 \x03(\x0b\x32\x19.tendermint.abci.EvidenceB\x04\xc8\xde\x1f\x00\"H\n\x0eRequestCheckTx\x12\n\n\x02tx\x18\x01 \x01(\x0c\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.tendermint.abci.CheckTxType\"\x1e\n\x10RequestDeliverTx\x12\n\n\x02tx\x18\x01 \x01(\x0c\"!\n\x0fRequestEndBlock\x12\x0e\n\x06height\x18\x01 \x01(\x03\"\x0f\n\rRequestCommit\"\x16\n\x14RequestListSnapshots\"U\n\x14RequestOfferSnapshot\x12+\n\x08snapshot\x18\x01 \x01(\x0b\x32\x19.tendermint.abci.Snapshot\x12\x10\n\x08\x61pp_hash\x18\x02 \x01(\x0c\"I\n\x18RequestLoadSnapshotChunk\x12\x0e\n\x06height\x18\x01 \x01(\x04\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\r\x12\r\n\x05\x63hunk\x18\x03 \x01(\r\"I\n\x19RequestApplySnapshotChunk\x12\r\n\x05index\x18\x01 \x01(\r\x12\r\n\x05\x63hunk\x18\x02 \x01(\x0c\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xb3\x07\n\x08Response\x12\x37\n\texception\x18\x01 \x01(\x0b\x32\".tendermint.abci.ResponseExceptionH\x00\x12-\n\x04\x65\x63ho\x18\x02 \x01(\x0b\x32\x1d.tendermint.abci.ResponseEchoH\x00\x12/\n\x05\x66lush\x18\x03 \x01(\x0b\x32\x1e.tendermint.abci.ResponseFlushH\x00\x12-\n\x04info\x18\x04 \x01(\x0b\x32\x1d.tendermint.abci.ResponseInfoH\x00\x12\x38\n\nset_option\x18\x05 \x01(\x0b\x32\".tendermint.abci.ResponseSetOptionH\x00\x12\x38\n\ninit_chain\x18\x06 \x01(\x0b\x32\".tendermint.abci.ResponseInitChainH\x00\x12/\n\x05query\x18\x07 \x01(\x0b\x32\x1e.tendermint.abci.ResponseQueryH\x00\x12:\n\x0b\x62\x65gin_block\x18\x08 \x01(\x0b\x32#.tendermint.abci.ResponseBeginBlockH\x00\x12\x34\n\x08\x63heck_tx\x18\t \x01(\x0b\x32 .tendermint.abci.ResponseCheckTxH\x00\x12\x38\n\ndeliver_tx\x18\n \x01(\x0b\x32\".tendermint.abci.ResponseDeliverTxH\x00\x12\x36\n\tend_block\x18\x0b \x01(\x0b\x32!.tendermint.abci.ResponseEndBlockH\x00\x12\x31\n\x06\x63ommit\x18\x0c \x01(\x0b\x32\x1f.tendermint.abci.ResponseCommitH\x00\x12@\n\x0elist_snapshots\x18\r \x01(\x0b\x32&.tendermint.abci.ResponseListSnapshotsH\x00\x12@\n\x0eoffer_snapshot\x18\x0e \x01(\x0b\x32&.tendermint.abci.ResponseOfferSnapshotH\x00\x12I\n\x13load_snapshot_chunk\x18\x0f \x01(\x0b\x32*.tendermint.abci.ResponseLoadSnapshotChunkH\x00\x12K\n\x14\x61pply_snapshot_chunk\x18\x10 \x01(\x0b\x32+.tendermint.abci.ResponseApplySnapshotChunkH\x00\x42\x07\n\x05value\"\"\n\x11ResponseException\x12\r\n\x05\x65rror\x18\x01 \x01(\t\"\x1f\n\x0cResponseEcho\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x0f\n\rResponseFlush\"z\n\x0cResponseInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x03 \x01(\x04\x12\x19\n\x11last_block_height\x18\x04 \x01(\x03\x12\x1b\n\x13last_block_app_hash\x18\x05 \x01(\x0c\"<\n\x11ResponseSetOption\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\"\x9d\x01\n\x11ResponseInitChain\x12:\n\x10\x63onsensus_params\x18\x01 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12:\n\nvalidators\x18\x02 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x10\n\x08\x61pp_hash\x18\x03 \x01(\x0c\"\xb6\x01\n\rResponseQuery\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\r\n\x05index\x18\x05 \x01(\x03\x12\x0b\n\x03key\x18\x06 \x01(\x0c\x12\r\n\x05value\x18\x07 \x01(\x0c\x12.\n\tproof_ops\x18\x08 \x01(\x0b\x32\x1b.tendermint.crypto.ProofOps\x12\x0e\n\x06height\x18\t \x01(\x03\x12\x11\n\tcodespace\x18\n \x01(\t\"V\n\x12ResponseBeginBlock\x12@\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\"\xd9\x01\n\x0fResponseCheckTx\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\x1e\n\ngas_wanted\x18\x05 \x01(\x03R\ngas_wanted\x12\x1a\n\x08gas_used\x18\x06 \x01(\x03R\x08gas_used\x12@\n\x06\x65vents\x18\x07 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\x12\x11\n\tcodespace\x18\x08 \x01(\t\"\xdb\x01\n\x11ResponseDeliverTx\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\x1e\n\ngas_wanted\x18\x05 \x01(\x03R\ngas_wanted\x12\x1a\n\x08gas_used\x18\x06 \x01(\x03R\x08gas_used\x12@\n\x06\x65vents\x18\x07 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\x12\x11\n\tcodespace\x18\x08 \x01(\t\"\xda\x01\n\x10ResponseEndBlock\x12\x41\n\x11validator_updates\x18\x01 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x41\n\x17\x63onsensus_param_updates\x18\x02 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12@\n\x06\x65vents\x18\x03 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\"5\n\x0eResponseCommit\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x15\n\rretain_height\x18\x03 \x01(\x03\"E\n\x15ResponseListSnapshots\x12,\n\tsnapshots\x18\x01 \x03(\x0b\x32\x19.tendermint.abci.Snapshot\"\xb6\x01\n\x15ResponseOfferSnapshot\x12=\n\x06result\x18\x01 \x01(\x0e\x32-.tendermint.abci.ResponseOfferSnapshot.Result\"^\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43\x43\x45PT\x10\x01\x12\t\n\x05\x41\x42ORT\x10\x02\x12\n\n\x06REJECT\x10\x03\x12\x11\n\rREJECT_FORMAT\x10\x04\x12\x11\n\rREJECT_SENDER\x10\x05\"*\n\x19ResponseLoadSnapshotChunk\x12\r\n\x05\x63hunk\x18\x01 \x01(\x0c\"\xf2\x01\n\x1aResponseApplySnapshotChunk\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32\x32.tendermint.abci.ResponseApplySnapshotChunk.Result\x12\x16\n\x0erefetch_chunks\x18\x02 \x03(\r\x12\x16\n\x0ereject_senders\x18\x03 \x03(\t\"`\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43\x43\x45PT\x10\x01\x12\t\n\x05\x41\x42ORT\x10\x02\x12\t\n\x05RETRY\x10\x03\x12\x12\n\x0eRETRY_SNAPSHOT\x10\x04\x12\x13\n\x0fREJECT_SNAPSHOT\x10\x05\"\xda\x01\n\x0f\x43onsensusParams\x12+\n\x05\x62lock\x18\x01 \x01(\x0b\x32\x1c.tendermint.abci.BlockParams\x12\x32\n\x08\x65vidence\x18\x02 \x01(\x0b\x32 .tendermint.types.EvidenceParams\x12\x34\n\tvalidator\x18\x03 \x01(\x0b\x32!.tendermint.types.ValidatorParams\x12\x30\n\x07version\x18\x04 \x01(\x0b\x32\x1f.tendermint.types.VersionParams\"1\n\x0b\x42lockParams\x12\x11\n\tmax_bytes\x18\x01 \x01(\x03\x12\x0f\n\x07max_gas\x18\x02 \x01(\x03\"O\n\x0eLastCommitInfo\x12\r\n\x05round\x18\x01 \x01(\x05\x12.\n\x05votes\x18\x02 \x03(\x0b\x32\x19.tendermint.abci.VoteInfoB\x04\xc8\xde\x1f\x00\"h\n\x05\x45vent\x12\x0c\n\x04type\x18\x01 \x01(\t\x12Q\n\nattributes\x18\x02 \x03(\x0b\x32\x1f.tendermint.abci.EventAttributeB\x1c\xc8\xde\x1f\x00\xea\xde\x1f\x14\x61ttributes,omitempty\";\n\x0e\x45ventAttribute\x12\x0b\n\x03key\x18\x01 \x01(\x0c\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\r\n\x05index\x18\x03 \x01(\x08\"o\n\x08TxResult\x12\x0e\n\x06height\x18\x01 \x01(\x03\x12\r\n\x05index\x18\x02 \x01(\r\x12\n\n\x02tx\x18\x03 \x01(\x0c\x12\x38\n\x06result\x18\x04 \x01(\x0b\x32\".tendermint.abci.ResponseDeliverTxB\x04\xc8\xde\x1f\x00\"+\n\tValidator\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x12\r\n\x05power\x18\x03 \x01(\x03\"U\n\x0fValidatorUpdate\x12\x33\n\x07pub_key\x18\x01 \x01(\x0b\x32\x1c.tendermint.crypto.PublicKeyB\x04\xc8\xde\x1f\x00\x12\r\n\x05power\x18\x02 \x01(\x03\"Z\n\x08VoteInfo\x12\x33\n\tvalidator\x18\x01 \x01(\x0b\x32\x1a.tendermint.abci.ValidatorB\x04\xc8\xde\x1f\x00\x12\x19\n\x11signed_last_block\x18\x02 \x01(\x08\"\xcc\x01\n\x08\x45vidence\x12+\n\x04type\x18\x01 \x01(\x0e\x32\x1d.tendermint.abci.EvidenceType\x12\x33\n\tvalidator\x18\x02 \x01(\x0b\x32\x1a.tendermint.abci.ValidatorB\x04\xc8\xde\x1f\x00\x12\x0e\n\x06height\x18\x03 \x01(\x03\x12\x32\n\x04time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x12\x1a\n\x12total_voting_power\x18\x05 \x01(\x03\"Z\n\x08Snapshot\x12\x0e\n\x06height\x18\x01 \x01(\x04\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\r\x12\x0e\n\x06\x63hunks\x18\x03 \x01(\r\x12\x0c\n\x04hash\x18\x04 \x01(\x0c\x12\x10\n\x08metadata\x18\x05 \x01(\x0c*9\n\x0b\x43heckTxType\x12\x10\n\x03NEW\x10\x00\x1a\x07\x8a\x9d \x03New\x12\x18\n\x07RECHECK\x10\x01\x1a\x0b\x8a\x9d \x07Recheck*H\n\x0c\x45videnceType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x12\n\x0e\x44UPLICATE_VOTE\x10\x01\x12\x17\n\x13LIGHT_CLIENT_ATTACK\x10\x02\x32\x83\n\n\x0f\x41\x42\x43IApplication\x12\x43\n\x04\x45\x63ho\x12\x1c.tendermint.abci.RequestEcho\x1a\x1d.tendermint.abci.ResponseEcho\x12\x46\n\x05\x46lush\x12\x1d.tendermint.abci.RequestFlush\x1a\x1e.tendermint.abci.ResponseFlush\x12\x43\n\x04Info\x12\x1c.tendermint.abci.RequestInfo\x1a\x1d.tendermint.abci.ResponseInfo\x12R\n\tSetOption\x12!.tendermint.abci.RequestSetOption\x1a\".tendermint.abci.ResponseSetOption\x12R\n\tDeliverTx\x12!.tendermint.abci.RequestDeliverTx\x1a\".tendermint.abci.ResponseDeliverTx\x12L\n\x07\x43heckTx\x12\x1f.tendermint.abci.RequestCheckTx\x1a .tendermint.abci.ResponseCheckTx\x12\x46\n\x05Query\x12\x1d.tendermint.abci.RequestQuery\x1a\x1e.tendermint.abci.ResponseQuery\x12I\n\x06\x43ommit\x12\x1e.tendermint.abci.RequestCommit\x1a\x1f.tendermint.abci.ResponseCommit\x12R\n\tInitChain\x12!.tendermint.abci.RequestInitChain\x1a\".tendermint.abci.ResponseInitChain\x12U\n\nBeginBlock\x12\".tendermint.abci.RequestBeginBlock\x1a#.tendermint.abci.ResponseBeginBlock\x12O\n\x08\x45ndBlock\x12 .tendermint.abci.RequestEndBlock\x1a!.tendermint.abci.ResponseEndBlock\x12^\n\rListSnapshots\x12%.tendermint.abci.RequestListSnapshots\x1a&.tendermint.abci.ResponseListSnapshots\x12^\n\rOfferSnapshot\x12%.tendermint.abci.RequestOfferSnapshot\x1a&.tendermint.abci.ResponseOfferSnapshot\x12j\n\x11LoadSnapshotChunk\x12).tendermint.abci.RequestLoadSnapshotChunk\x1a*.tendermint.abci.ResponseLoadSnapshotChunk\x12m\n\x12\x41pplySnapshotChunk\x12*.tendermint.abci.RequestApplySnapshotChunk\x1a+.tendermint.abci.ResponseApplySnapshotChunkB-Z+github.com/tendermint/tendermint/abci/typesb\x06proto3'
+  serialized_pb=b'\n\x1btendermint/abci/types.proto\x12\x0ftendermint.abci\x1a\x1dtendermint/crypto/proof.proto\x1a\x1ctendermint/types/types.proto\x1a\x1ctendermint/crypto/keys.proto\x1a\x1dtendermint/types/params.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x14gogoproto/gogo.proto\"\xb1\x06\n\x07Request\x12,\n\x04\x65\x63ho\x18\x01 \x01(\x0b\x32\x1c.tendermint.abci.RequestEchoH\x00\x12.\n\x05\x66lush\x18\x02 \x01(\x0b\x32\x1d.tendermint.abci.RequestFlushH\x00\x12,\n\x04info\x18\x03 \x01(\x0b\x32\x1c.tendermint.abci.RequestInfoH\x00\x12\x37\n\ninit_chain\x18\x04 \x01(\x0b\x32!.tendermint.abci.RequestInitChainH\x00\x12.\n\x05query\x18\x05 \x01(\x0b\x32\x1d.tendermint.abci.RequestQueryH\x00\x12\x39\n\x0b\x62\x65gin_block\x18\x06 \x01(\x0b\x32\".tendermint.abci.RequestBeginBlockH\x00\x12\x33\n\x08\x63heck_tx\x18\x07 \x01(\x0b\x32\x1f.tendermint.abci.RequestCheckTxH\x00\x12\x37\n\ndeliver_tx\x18\x08 \x01(\x0b\x32!.tendermint.abci.RequestDeliverTxH\x00\x12\x35\n\tend_block\x18\t \x01(\x0b\x32 .tendermint.abci.RequestEndBlockH\x00\x12\x30\n\x06\x63ommit\x18\n \x01(\x0b\x32\x1e.tendermint.abci.RequestCommitH\x00\x12?\n\x0elist_snapshots\x18\x0b \x01(\x0b\x32%.tendermint.abci.RequestListSnapshotsH\x00\x12?\n\x0eoffer_snapshot\x18\x0c \x01(\x0b\x32%.tendermint.abci.RequestOfferSnapshotH\x00\x12H\n\x13load_snapshot_chunk\x18\r \x01(\x0b\x32).tendermint.abci.RequestLoadSnapshotChunkH\x00\x12J\n\x14\x61pply_snapshot_chunk\x18\x0e \x01(\x0b\x32*.tendermint.abci.RequestApplySnapshotChunkH\x00\x42\x07\n\x05value\"\x1e\n\x0bRequestEcho\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x0e\n\x0cRequestFlush\"J\n\x0bRequestInfo\x12\x0f\n\x07version\x18\x01 \x01(\t\x12\x15\n\rblock_version\x18\x02 \x01(\x04\x12\x13\n\x0bp2p_version\x18\x03 \x01(\x04\"\x81\x02\n\x10RequestInitChain\x12\x32\n\x04time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x12\x10\n\x08\x63hain_id\x18\x02 \x01(\t\x12:\n\x10\x63onsensus_params\x18\x03 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12:\n\nvalidators\x18\x04 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x17\n\x0f\x61pp_state_bytes\x18\x05 \x01(\x0c\x12\x16\n\x0einitial_height\x18\x06 \x01(\x03\"I\n\x0cRequestQuery\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\x0c\x12\x0c\n\x04path\x18\x02 \x01(\t\x12\x0e\n\x06height\x18\x03 \x01(\x03\x12\r\n\x05prove\x18\x04 \x01(\x08\"\xd1\x01\n\x11RequestBeginBlock\x12\x0c\n\x04hash\x18\x01 \x01(\x0c\x12.\n\x06header\x18\x02 \x01(\x0b\x32\x18.tendermint.types.HeaderB\x04\xc8\xde\x1f\x00\x12?\n\x10last_commit_info\x18\x03 \x01(\x0b\x32\x1f.tendermint.abci.LastCommitInfoB\x04\xc8\xde\x1f\x00\x12=\n\x14\x62yzantine_validators\x18\x04 \x03(\x0b\x32\x19.tendermint.abci.EvidenceB\x04\xc8\xde\x1f\x00\"H\n\x0eRequestCheckTx\x12\n\n\x02tx\x18\x01 \x01(\x0c\x12*\n\x04type\x18\x02 \x01(\x0e\x32\x1c.tendermint.abci.CheckTxType\"\x1e\n\x10RequestDeliverTx\x12\n\n\x02tx\x18\x01 \x01(\x0c\"!\n\x0fRequestEndBlock\x12\x0e\n\x06height\x18\x01 \x01(\x03\"\x0f\n\rRequestCommit\"\x16\n\x14RequestListSnapshots\"U\n\x14RequestOfferSnapshot\x12+\n\x08snapshot\x18\x01 \x01(\x0b\x32\x19.tendermint.abci.Snapshot\x12\x10\n\x08\x61pp_hash\x18\x02 \x01(\x0c\"I\n\x18RequestLoadSnapshotChunk\x12\x0e\n\x06height\x18\x01 \x01(\x04\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\r\x12\r\n\x05\x63hunk\x18\x03 \x01(\r\"I\n\x19RequestApplySnapshotChunk\x12\r\n\x05index\x18\x01 \x01(\r\x12\r\n\x05\x63hunk\x18\x02 \x01(\x0c\x12\x0e\n\x06sender\x18\x03 \x01(\t\"\xf9\x06\n\x08Response\x12\x37\n\texception\x18\x01 \x01(\x0b\x32\".tendermint.abci.ResponseExceptionH\x00\x12-\n\x04\x65\x63ho\x18\x02 \x01(\x0b\x32\x1d.tendermint.abci.ResponseEchoH\x00\x12/\n\x05\x66lush\x18\x03 \x01(\x0b\x32\x1e.tendermint.abci.ResponseFlushH\x00\x12-\n\x04info\x18\x04 \x01(\x0b\x32\x1d.tendermint.abci.ResponseInfoH\x00\x12\x38\n\ninit_chain\x18\x05 \x01(\x0b\x32\".tendermint.abci.ResponseInitChainH\x00\x12/\n\x05query\x18\x06 \x01(\x0b\x32\x1e.tendermint.abci.ResponseQueryH\x00\x12:\n\x0b\x62\x65gin_block\x18\x07 \x01(\x0b\x32#.tendermint.abci.ResponseBeginBlockH\x00\x12\x34\n\x08\x63heck_tx\x18\x08 \x01(\x0b\x32 .tendermint.abci.ResponseCheckTxH\x00\x12\x38\n\ndeliver_tx\x18\t \x01(\x0b\x32\".tendermint.abci.ResponseDeliverTxH\x00\x12\x36\n\tend_block\x18\n \x01(\x0b\x32!.tendermint.abci.ResponseEndBlockH\x00\x12\x31\n\x06\x63ommit\x18\x0b \x01(\x0b\x32\x1f.tendermint.abci.ResponseCommitH\x00\x12@\n\x0elist_snapshots\x18\x0c \x01(\x0b\x32&.tendermint.abci.ResponseListSnapshotsH\x00\x12@\n\x0eoffer_snapshot\x18\r \x01(\x0b\x32&.tendermint.abci.ResponseOfferSnapshotH\x00\x12I\n\x13load_snapshot_chunk\x18\x0e \x01(\x0b\x32*.tendermint.abci.ResponseLoadSnapshotChunkH\x00\x12K\n\x14\x61pply_snapshot_chunk\x18\x0f \x01(\x0b\x32+.tendermint.abci.ResponseApplySnapshotChunkH\x00\x42\x07\n\x05value\"\"\n\x11ResponseException\x12\r\n\x05\x65rror\x18\x01 \x01(\t\"\x1f\n\x0cResponseEcho\x12\x0f\n\x07message\x18\x01 \x01(\t\"\x0f\n\rResponseFlush\"z\n\x0cResponseInfo\x12\x0c\n\x04\x64\x61ta\x18\x01 \x01(\t\x12\x0f\n\x07version\x18\x02 \x01(\t\x12\x13\n\x0b\x61pp_version\x18\x03 \x01(\x04\x12\x19\n\x11last_block_height\x18\x04 \x01(\x03\x12\x1b\n\x13last_block_app_hash\x18\x05 \x01(\x0c\"\x9d\x01\n\x11ResponseInitChain\x12:\n\x10\x63onsensus_params\x18\x01 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12:\n\nvalidators\x18\x02 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x10\n\x08\x61pp_hash\x18\x03 \x01(\x0c\"\xb6\x01\n\rResponseQuery\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\r\n\x05index\x18\x05 \x01(\x03\x12\x0b\n\x03key\x18\x06 \x01(\x0c\x12\r\n\x05value\x18\x07 \x01(\x0c\x12.\n\tproof_ops\x18\x08 \x01(\x0b\x32\x1b.tendermint.crypto.ProofOps\x12\x0e\n\x06height\x18\t \x01(\x03\x12\x11\n\tcodespace\x18\n \x01(\t\"V\n\x12ResponseBeginBlock\x12@\n\x06\x65vents\x18\x01 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\"\xd9\x01\n\x0fResponseCheckTx\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\x1e\n\ngas_wanted\x18\x05 \x01(\x03R\ngas_wanted\x12\x1a\n\x08gas_used\x18\x06 \x01(\x03R\x08gas_used\x12@\n\x06\x65vents\x18\x07 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\x12\x11\n\tcodespace\x18\x08 \x01(\t\"\xdb\x01\n\x11ResponseDeliverTx\x12\x0c\n\x04\x63ode\x18\x01 \x01(\r\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x0b\n\x03log\x18\x03 \x01(\t\x12\x0c\n\x04info\x18\x04 \x01(\t\x12\x1e\n\ngas_wanted\x18\x05 \x01(\x03R\ngas_wanted\x12\x1a\n\x08gas_used\x18\x06 \x01(\x03R\x08gas_used\x12@\n\x06\x65vents\x18\x07 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\x12\x11\n\tcodespace\x18\x08 \x01(\t\"\xda\x01\n\x10ResponseEndBlock\x12\x41\n\x11validator_updates\x18\x01 \x03(\x0b\x32 .tendermint.abci.ValidatorUpdateB\x04\xc8\xde\x1f\x00\x12\x41\n\x17\x63onsensus_param_updates\x18\x02 \x01(\x0b\x32 .tendermint.abci.ConsensusParams\x12@\n\x06\x65vents\x18\x03 \x03(\x0b\x32\x16.tendermint.abci.EventB\x18\xc8\xde\x1f\x00\xea\xde\x1f\x10\x65vents,omitempty\"5\n\x0eResponseCommit\x12\x0c\n\x04\x64\x61ta\x18\x02 \x01(\x0c\x12\x15\n\rretain_height\x18\x03 \x01(\x03\"E\n\x15ResponseListSnapshots\x12,\n\tsnapshots\x18\x01 \x03(\x0b\x32\x19.tendermint.abci.Snapshot\"\xb6\x01\n\x15ResponseOfferSnapshot\x12=\n\x06result\x18\x01 \x01(\x0e\x32-.tendermint.abci.ResponseOfferSnapshot.Result\"^\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43\x43\x45PT\x10\x01\x12\t\n\x05\x41\x42ORT\x10\x02\x12\n\n\x06REJECT\x10\x03\x12\x11\n\rREJECT_FORMAT\x10\x04\x12\x11\n\rREJECT_SENDER\x10\x05\"*\n\x19ResponseLoadSnapshotChunk\x12\r\n\x05\x63hunk\x18\x01 \x01(\x0c\"\xf2\x01\n\x1aResponseApplySnapshotChunk\x12\x42\n\x06result\x18\x01 \x01(\x0e\x32\x32.tendermint.abci.ResponseApplySnapshotChunk.Result\x12\x16\n\x0erefetch_chunks\x18\x02 \x03(\r\x12\x16\n\x0ereject_senders\x18\x03 \x03(\t\"`\n\x06Result\x12\x0b\n\x07UNKNOWN\x10\x00\x12\n\n\x06\x41\x43\x43\x45PT\x10\x01\x12\t\n\x05\x41\x42ORT\x10\x02\x12\t\n\x05RETRY\x10\x03\x12\x12\n\x0eRETRY_SNAPSHOT\x10\x04\x12\x13\n\x0fREJECT_SNAPSHOT\x10\x05\"\xda\x01\n\x0f\x43onsensusParams\x12+\n\x05\x62lock\x18\x01 \x01(\x0b\x32\x1c.tendermint.abci.BlockParams\x12\x32\n\x08\x65vidence\x18\x02 \x01(\x0b\x32 .tendermint.types.EvidenceParams\x12\x34\n\tvalidator\x18\x03 \x01(\x0b\x32!.tendermint.types.ValidatorParams\x12\x30\n\x07version\x18\x04 \x01(\x0b\x32\x1f.tendermint.types.VersionParams\"1\n\x0b\x42lockParams\x12\x11\n\tmax_bytes\x18\x01 \x01(\x03\x12\x0f\n\x07max_gas\x18\x02 \x01(\x03\"O\n\x0eLastCommitInfo\x12\r\n\x05round\x18\x01 \x01(\x05\x12.\n\x05votes\x18\x02 \x03(\x0b\x32\x19.tendermint.abci.VoteInfoB\x04\xc8\xde\x1f\x00\"h\n\x05\x45vent\x12\x0c\n\x04type\x18\x01 \x01(\t\x12Q\n\nattributes\x18\x02 \x03(\x0b\x32\x1f.tendermint.abci.EventAttributeB\x1c\xc8\xde\x1f\x00\xea\xde\x1f\x14\x61ttributes,omitempty\";\n\x0e\x45ventAttribute\x12\x0b\n\x03key\x18\x01 \x01(\x0c\x12\r\n\x05value\x18\x02 \x01(\x0c\x12\r\n\x05index\x18\x03 \x01(\x08\"o\n\x08TxResult\x12\x0e\n\x06height\x18\x01 \x01(\x03\x12\r\n\x05index\x18\x02 \x01(\r\x12\n\n\x02tx\x18\x03 \x01(\x0c\x12\x38\n\x06result\x18\x04 \x01(\x0b\x32\".tendermint.abci.ResponseDeliverTxB\x04\xc8\xde\x1f\x00\"+\n\tValidator\x12\x0f\n\x07\x61\x64\x64ress\x18\x01 \x01(\x0c\x12\r\n\x05power\x18\x03 \x01(\x03\"U\n\x0fValidatorUpdate\x12\x33\n\x07pub_key\x18\x01 \x01(\x0b\x32\x1c.tendermint.crypto.PublicKeyB\x04\xc8\xde\x1f\x00\x12\r\n\x05power\x18\x02 \x01(\x03\"Z\n\x08VoteInfo\x12\x33\n\tvalidator\x18\x01 \x01(\x0b\x32\x1a.tendermint.abci.ValidatorB\x04\xc8\xde\x1f\x00\x12\x19\n\x11signed_last_block\x18\x02 \x01(\x08\"\xcc\x01\n\x08\x45vidence\x12+\n\x04type\x18\x01 \x01(\x0e\x32\x1d.tendermint.abci.EvidenceType\x12\x33\n\tvalidator\x18\x02 \x01(\x0b\x32\x1a.tendermint.abci.ValidatorB\x04\xc8\xde\x1f\x00\x12\x0e\n\x06height\x18\x03 \x01(\x03\x12\x32\n\x04time\x18\x04 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x12\x1a\n\x12total_voting_power\x18\x05 \x01(\x03\"Z\n\x08Snapshot\x12\x0e\n\x06height\x18\x01 \x01(\x04\x12\x0e\n\x06\x66ormat\x18\x02 \x01(\r\x12\x0e\n\x06\x63hunks\x18\x03 \x01(\r\x12\x0c\n\x04hash\x18\x04 \x01(\x0c\x12\x10\n\x08metadata\x18\x05 \x01(\x0c*9\n\x0b\x43heckTxType\x12\x10\n\x03NEW\x10\x00\x1a\x07\x8a\x9d \x03New\x12\x18\n\x07RECHECK\x10\x01\x1a\x0b\x8a\x9d \x07Recheck*H\n\x0c\x45videnceType\x12\x0b\n\x07UNKNOWN\x10\x00\x12\x12\n\x0e\x44UPLICATE_VOTE\x10\x01\x12\x17\n\x13LIGHT_CLIENT_ATTACK\x10\x02\x32\xaf\t\n\x0f\x41\x42\x43IApplication\x12\x43\n\x04\x45\x63ho\x12\x1c.tendermint.abci.RequestEcho\x1a\x1d.tendermint.abci.ResponseEcho\x12\x46\n\x05\x46lush\x12\x1d.tendermint.abci.RequestFlush\x1a\x1e.tendermint.abci.ResponseFlush\x12\x43\n\x04Info\x12\x1c.tendermint.abci.RequestInfo\x1a\x1d.tendermint.abci.ResponseInfo\x12R\n\tDeliverTx\x12!.tendermint.abci.RequestDeliverTx\x1a\".tendermint.abci.ResponseDeliverTx\x12L\n\x07\x43heckTx\x12\x1f.tendermint.abci.RequestCheckTx\x1a .tendermint.abci.ResponseCheckTx\x12\x46\n\x05Query\x12\x1d.tendermint.abci.RequestQuery\x1a\x1e.tendermint.abci.ResponseQuery\x12I\n\x06\x43ommit\x12\x1e.tendermint.abci.RequestCommit\x1a\x1f.tendermint.abci.ResponseCommit\x12R\n\tInitChain\x12!.tendermint.abci.RequestInitChain\x1a\".tendermint.abci.ResponseInitChain\x12U\n\nBeginBlock\x12\".tendermint.abci.RequestBeginBlock\x1a#.tendermint.abci.ResponseBeginBlock\x12O\n\x08\x45ndBlock\x12 .tendermint.abci.RequestEndBlock\x1a!.tendermint.abci.ResponseEndBlock\x12^\n\rListSnapshots\x12%.tendermint.abci.RequestListSnapshots\x1a&.tendermint.abci.ResponseListSnapshots\x12^\n\rOfferSnapshot\x12%.tendermint.abci.RequestOfferSnapshot\x1a&.tendermint.abci.ResponseOfferSnapshot\x12j\n\x11LoadSnapshotChunk\x12).tendermint.abci.RequestLoadSnapshotChunk\x1a*.tendermint.abci.ResponseLoadSnapshotChunk\x12m\n\x12\x41pplySnapshotChunk\x12*.tendermint.abci.RequestApplySnapshotChunk\x1a+.tendermint.abci.ResponseApplySnapshotChunkB-Z+github.com/tendermint/tendermint/abci/typesb\x06proto3'
   ,
   dependencies=[tendermint_dot_crypto_dot_proof__pb2.DESCRIPTOR,tendermint_dot_types_dot_types__pb2.DESCRIPTOR,tendermint_dot_crypto_dot_keys__pb2.DESCRIPTOR,tendermint_dot_types_dot_params__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
@@ -50,8 +50,8 @@ _CHECKTXTYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6314,
-  serialized_end=6371,
+  serialized_start=6089,
+  serialized_end=6146,
 )
 _sym_db.RegisterEnumDescriptor(_CHECKTXTYPE)
 
@@ -81,8 +81,8 @@ _EVIDENCETYPE = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=6373,
-  serialized_end=6445,
+  serialized_start=6148,
+  serialized_end=6220,
 )
 _sym_db.RegisterEnumDescriptor(_EVIDENCETYPE)
 
@@ -134,8 +134,8 @@ _RESPONSEOFFERSNAPSHOT_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=4773,
-  serialized_end=4867,
+  serialized_start=4548,
+  serialized_end=4642,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSEOFFERSNAPSHOT_RESULT)
 
@@ -179,8 +179,8 @@ _RESPONSEAPPLYSNAPSHOTCHUNK_RESULT = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=None,
-  serialized_start=5060,
-  serialized_end=5156,
+  serialized_start=4835,
+  serialized_end=4931,
 )
 _sym_db.RegisterEnumDescriptor(_RESPONSEAPPLYSNAPSHOTCHUNK_RESULT)
 
@@ -215,85 +215,78 @@ _REQUEST = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='set_option', full_name='tendermint.abci.Request.set_option', index=3,
+      name='init_chain', full_name='tendermint.abci.Request.init_chain', index=3,
       number=4, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='init_chain', full_name='tendermint.abci.Request.init_chain', index=4,
+      name='query', full_name='tendermint.abci.Request.query', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='query', full_name='tendermint.abci.Request.query', index=5,
+      name='begin_block', full_name='tendermint.abci.Request.begin_block', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='begin_block', full_name='tendermint.abci.Request.begin_block', index=6,
+      name='check_tx', full_name='tendermint.abci.Request.check_tx', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='check_tx', full_name='tendermint.abci.Request.check_tx', index=7,
+      name='deliver_tx', full_name='tendermint.abci.Request.deliver_tx', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deliver_tx', full_name='tendermint.abci.Request.deliver_tx', index=8,
+      name='end_block', full_name='tendermint.abci.Request.end_block', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='end_block', full_name='tendermint.abci.Request.end_block', index=9,
+      name='commit', full_name='tendermint.abci.Request.commit', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='commit', full_name='tendermint.abci.Request.commit', index=10,
+      name='list_snapshots', full_name='tendermint.abci.Request.list_snapshots', index=10,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='list_snapshots', full_name='tendermint.abci.Request.list_snapshots', index=11,
+      name='offer_snapshot', full_name='tendermint.abci.Request.offer_snapshot', index=11,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='offer_snapshot', full_name='tendermint.abci.Request.offer_snapshot', index=12,
+      name='load_snapshot_chunk', full_name='tendermint.abci.Request.load_snapshot_chunk', index=12,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='load_snapshot_chunk', full_name='tendermint.abci.Request.load_snapshot_chunk', index=13,
+      name='apply_snapshot_chunk', full_name='tendermint.abci.Request.apply_snapshot_chunk', index=13,
       number=14, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='apply_snapshot_chunk', full_name='tendermint.abci.Request.apply_snapshot_chunk', index=14,
-      number=15, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -316,7 +309,7 @@ _REQUEST = _descriptor.Descriptor(
     fields=[]),
   ],
   serialized_start=226,
-  serialized_end=1100,
+  serialized_end=1043,
 )
 
 
@@ -347,8 +340,8 @@ _REQUESTECHO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1102,
-  serialized_end=1132,
+  serialized_start=1045,
+  serialized_end=1075,
 )
 
 
@@ -372,8 +365,8 @@ _REQUESTFLUSH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1134,
-  serialized_end=1148,
+  serialized_start=1077,
+  serialized_end=1091,
 )
 
 
@@ -418,47 +411,8 @@ _REQUESTINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1150,
-  serialized_end=1224,
-)
-
-
-_REQUESTSETOPTION = _descriptor.Descriptor(
-  name='RequestSetOption',
-  full_name='tendermint.abci.RequestSetOption',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='key', full_name='tendermint.abci.RequestSetOption.key', index=0,
-      number=1, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='value', full_name='tendermint.abci.RequestSetOption.value', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=1226,
-  serialized_end=1272,
+  serialized_start=1093,
+  serialized_end=1167,
 )
 
 
@@ -524,8 +478,8 @@ _REQUESTINITCHAIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1275,
-  serialized_end=1532,
+  serialized_start=1170,
+  serialized_end=1427,
 )
 
 
@@ -577,8 +531,8 @@ _REQUESTQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1534,
-  serialized_end=1607,
+  serialized_start=1429,
+  serialized_end=1502,
 )
 
 
@@ -630,8 +584,8 @@ _REQUESTBEGINBLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1610,
-  serialized_end=1819,
+  serialized_start=1505,
+  serialized_end=1714,
 )
 
 
@@ -669,8 +623,8 @@ _REQUESTCHECKTX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1821,
-  serialized_end=1893,
+  serialized_start=1716,
+  serialized_end=1788,
 )
 
 
@@ -701,8 +655,8 @@ _REQUESTDELIVERTX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1895,
-  serialized_end=1925,
+  serialized_start=1790,
+  serialized_end=1820,
 )
 
 
@@ -733,8 +687,8 @@ _REQUESTENDBLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1927,
-  serialized_end=1960,
+  serialized_start=1822,
+  serialized_end=1855,
 )
 
 
@@ -758,8 +712,8 @@ _REQUESTCOMMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1962,
-  serialized_end=1977,
+  serialized_start=1857,
+  serialized_end=1872,
 )
 
 
@@ -783,8 +737,8 @@ _REQUESTLISTSNAPSHOTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1979,
-  serialized_end=2001,
+  serialized_start=1874,
+  serialized_end=1896,
 )
 
 
@@ -822,8 +776,8 @@ _REQUESTOFFERSNAPSHOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2003,
-  serialized_end=2088,
+  serialized_start=1898,
+  serialized_end=1983,
 )
 
 
@@ -868,8 +822,8 @@ _REQUESTLOADSNAPSHOTCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2090,
-  serialized_end=2163,
+  serialized_start=1985,
+  serialized_end=2058,
 )
 
 
@@ -914,8 +868,8 @@ _REQUESTAPPLYSNAPSHOTCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2165,
-  serialized_end=2238,
+  serialized_start=2060,
+  serialized_end=2133,
 )
 
 
@@ -956,85 +910,78 @@ _RESPONSE = _descriptor.Descriptor(
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='set_option', full_name='tendermint.abci.Response.set_option', index=4,
+      name='init_chain', full_name='tendermint.abci.Response.init_chain', index=4,
       number=5, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='init_chain', full_name='tendermint.abci.Response.init_chain', index=5,
+      name='query', full_name='tendermint.abci.Response.query', index=5,
       number=6, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='query', full_name='tendermint.abci.Response.query', index=6,
+      name='begin_block', full_name='tendermint.abci.Response.begin_block', index=6,
       number=7, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='begin_block', full_name='tendermint.abci.Response.begin_block', index=7,
+      name='check_tx', full_name='tendermint.abci.Response.check_tx', index=7,
       number=8, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='check_tx', full_name='tendermint.abci.Response.check_tx', index=8,
+      name='deliver_tx', full_name='tendermint.abci.Response.deliver_tx', index=8,
       number=9, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='deliver_tx', full_name='tendermint.abci.Response.deliver_tx', index=9,
+      name='end_block', full_name='tendermint.abci.Response.end_block', index=9,
       number=10, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='end_block', full_name='tendermint.abci.Response.end_block', index=10,
+      name='commit', full_name='tendermint.abci.Response.commit', index=10,
       number=11, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='commit', full_name='tendermint.abci.Response.commit', index=11,
+      name='list_snapshots', full_name='tendermint.abci.Response.list_snapshots', index=11,
       number=12, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='list_snapshots', full_name='tendermint.abci.Response.list_snapshots', index=12,
+      name='offer_snapshot', full_name='tendermint.abci.Response.offer_snapshot', index=12,
       number=13, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='offer_snapshot', full_name='tendermint.abci.Response.offer_snapshot', index=13,
+      name='load_snapshot_chunk', full_name='tendermint.abci.Response.load_snapshot_chunk', index=13,
       number=14, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
       serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
-      name='load_snapshot_chunk', full_name='tendermint.abci.Response.load_snapshot_chunk', index=14,
+      name='apply_snapshot_chunk', full_name='tendermint.abci.Response.apply_snapshot_chunk', index=14,
       number=15, type=11, cpp_type=10, label=1,
-      has_default_value=False, default_value=None,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='apply_snapshot_chunk', full_name='tendermint.abci.Response.apply_snapshot_chunk', index=15,
-      number=16, type=11, cpp_type=10, label=1,
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
@@ -1056,8 +1003,8 @@ _RESPONSE = _descriptor.Descriptor(
       create_key=_descriptor._internal_create_key,
     fields=[]),
   ],
-  serialized_start=2241,
-  serialized_end=3188,
+  serialized_start=2136,
+  serialized_end=3025,
 )
 
 
@@ -1088,8 +1035,8 @@ _RESPONSEEXCEPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3190,
-  serialized_end=3224,
+  serialized_start=3027,
+  serialized_end=3061,
 )
 
 
@@ -1120,8 +1067,8 @@ _RESPONSEECHO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3226,
-  serialized_end=3257,
+  serialized_start=3063,
+  serialized_end=3094,
 )
 
 
@@ -1145,8 +1092,8 @@ _RESPONSEFLUSH = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3259,
-  serialized_end=3274,
+  serialized_start=3096,
+  serialized_end=3111,
 )
 
 
@@ -1205,54 +1152,8 @@ _RESPONSEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3276,
-  serialized_end=3398,
-)
-
-
-_RESPONSESETOPTION = _descriptor.Descriptor(
-  name='ResponseSetOption',
-  full_name='tendermint.abci.ResponseSetOption',
-  filename=None,
-  file=DESCRIPTOR,
-  containing_type=None,
-  create_key=_descriptor._internal_create_key,
-  fields=[
-    _descriptor.FieldDescriptor(
-      name='code', full_name='tendermint.abci.ResponseSetOption.code', index=0,
-      number=1, type=13, cpp_type=3, label=1,
-      has_default_value=False, default_value=0,
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='log', full_name='tendermint.abci.ResponseSetOption.log', index=1,
-      number=3, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-    _descriptor.FieldDescriptor(
-      name='info', full_name='tendermint.abci.ResponseSetOption.info', index=2,
-      number=4, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
-      message_type=None, enum_type=None, containing_type=None,
-      is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
-  ],
-  extensions=[
-  ],
-  nested_types=[],
-  enum_types=[
-  ],
-  serialized_options=None,
-  is_extendable=False,
-  syntax='proto3',
-  extension_ranges=[],
-  oneofs=[
-  ],
-  serialized_start=3400,
-  serialized_end=3460,
+  serialized_start=3113,
+  serialized_end=3235,
 )
 
 
@@ -1297,8 +1198,8 @@ _RESPONSEINITCHAIN = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3463,
-  serialized_end=3620,
+  serialized_start=3238,
+  serialized_end=3395,
 )
 
 
@@ -1385,8 +1286,8 @@ _RESPONSEQUERY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3623,
-  serialized_end=3805,
+  serialized_start=3398,
+  serialized_end=3580,
 )
 
 
@@ -1417,8 +1318,8 @@ _RESPONSEBEGINBLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3807,
-  serialized_end=3893,
+  serialized_start=3582,
+  serialized_end=3668,
 )
 
 
@@ -1498,8 +1399,8 @@ _RESPONSECHECKTX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3896,
-  serialized_end=4113,
+  serialized_start=3671,
+  serialized_end=3888,
 )
 
 
@@ -1579,8 +1480,8 @@ _RESPONSEDELIVERTX = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4116,
-  serialized_end=4335,
+  serialized_start=3891,
+  serialized_end=4110,
 )
 
 
@@ -1625,8 +1526,8 @@ _RESPONSEENDBLOCK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4338,
-  serialized_end=4556,
+  serialized_start=4113,
+  serialized_end=4331,
 )
 
 
@@ -1664,8 +1565,8 @@ _RESPONSECOMMIT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4558,
-  serialized_end=4611,
+  serialized_start=4333,
+  serialized_end=4386,
 )
 
 
@@ -1696,8 +1597,8 @@ _RESPONSELISTSNAPSHOTS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4613,
-  serialized_end=4682,
+  serialized_start=4388,
+  serialized_end=4457,
 )
 
 
@@ -1729,8 +1630,8 @@ _RESPONSEOFFERSNAPSHOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4685,
-  serialized_end=4867,
+  serialized_start=4460,
+  serialized_end=4642,
 )
 
 
@@ -1761,8 +1662,8 @@ _RESPONSELOADSNAPSHOTCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4869,
-  serialized_end=4911,
+  serialized_start=4644,
+  serialized_end=4686,
 )
 
 
@@ -1808,8 +1709,8 @@ _RESPONSEAPPLYSNAPSHOTCHUNK = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4914,
-  serialized_end=5156,
+  serialized_start=4689,
+  serialized_end=4931,
 )
 
 
@@ -1861,8 +1762,8 @@ _CONSENSUSPARAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5159,
-  serialized_end=5377,
+  serialized_start=4934,
+  serialized_end=5152,
 )
 
 
@@ -1900,8 +1801,8 @@ _BLOCKPARAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5379,
-  serialized_end=5428,
+  serialized_start=5154,
+  serialized_end=5203,
 )
 
 
@@ -1939,8 +1840,8 @@ _LASTCOMMITINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5430,
-  serialized_end=5509,
+  serialized_start=5205,
+  serialized_end=5284,
 )
 
 
@@ -1978,8 +1879,8 @@ _EVENT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5511,
-  serialized_end=5615,
+  serialized_start=5286,
+  serialized_end=5390,
 )
 
 
@@ -2024,8 +1925,8 @@ _EVENTATTRIBUTE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5617,
-  serialized_end=5676,
+  serialized_start=5392,
+  serialized_end=5451,
 )
 
 
@@ -2077,8 +1978,8 @@ _TXRESULT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5678,
-  serialized_end=5789,
+  serialized_start=5453,
+  serialized_end=5564,
 )
 
 
@@ -2116,8 +2017,8 @@ _VALIDATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5791,
-  serialized_end=5834,
+  serialized_start=5566,
+  serialized_end=5609,
 )
 
 
@@ -2155,8 +2056,8 @@ _VALIDATORUPDATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5836,
-  serialized_end=5921,
+  serialized_start=5611,
+  serialized_end=5696,
 )
 
 
@@ -2194,8 +2095,8 @@ _VOTEINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=5923,
-  serialized_end=6013,
+  serialized_start=5698,
+  serialized_end=5788,
 )
 
 
@@ -2254,8 +2155,8 @@ _EVIDENCE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6016,
-  serialized_end=6220,
+  serialized_start=5791,
+  serialized_end=5995,
 )
 
 
@@ -2314,14 +2215,13 @@ _SNAPSHOT = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=6222,
-  serialized_end=6312,
+  serialized_start=5997,
+  serialized_end=6087,
 )
 
 _REQUEST.fields_by_name['echo'].message_type = _REQUESTECHO
 _REQUEST.fields_by_name['flush'].message_type = _REQUESTFLUSH
 _REQUEST.fields_by_name['info'].message_type = _REQUESTINFO
-_REQUEST.fields_by_name['set_option'].message_type = _REQUESTSETOPTION
 _REQUEST.fields_by_name['init_chain'].message_type = _REQUESTINITCHAIN
 _REQUEST.fields_by_name['query'].message_type = _REQUESTQUERY
 _REQUEST.fields_by_name['begin_block'].message_type = _REQUESTBEGINBLOCK
@@ -2342,9 +2242,6 @@ _REQUEST.fields_by_name['flush'].containing_oneof = _REQUEST.oneofs_by_name['val
 _REQUEST.oneofs_by_name['value'].fields.append(
   _REQUEST.fields_by_name['info'])
 _REQUEST.fields_by_name['info'].containing_oneof = _REQUEST.oneofs_by_name['value']
-_REQUEST.oneofs_by_name['value'].fields.append(
-  _REQUEST.fields_by_name['set_option'])
-_REQUEST.fields_by_name['set_option'].containing_oneof = _REQUEST.oneofs_by_name['value']
 _REQUEST.oneofs_by_name['value'].fields.append(
   _REQUEST.fields_by_name['init_chain'])
 _REQUEST.fields_by_name['init_chain'].containing_oneof = _REQUEST.oneofs_by_name['value']
@@ -2390,7 +2287,6 @@ _RESPONSE.fields_by_name['exception'].message_type = _RESPONSEEXCEPTION
 _RESPONSE.fields_by_name['echo'].message_type = _RESPONSEECHO
 _RESPONSE.fields_by_name['flush'].message_type = _RESPONSEFLUSH
 _RESPONSE.fields_by_name['info'].message_type = _RESPONSEINFO
-_RESPONSE.fields_by_name['set_option'].message_type = _RESPONSESETOPTION
 _RESPONSE.fields_by_name['init_chain'].message_type = _RESPONSEINITCHAIN
 _RESPONSE.fields_by_name['query'].message_type = _RESPONSEQUERY
 _RESPONSE.fields_by_name['begin_block'].message_type = _RESPONSEBEGINBLOCK
@@ -2414,9 +2310,6 @@ _RESPONSE.fields_by_name['flush'].containing_oneof = _RESPONSE.oneofs_by_name['v
 _RESPONSE.oneofs_by_name['value'].fields.append(
   _RESPONSE.fields_by_name['info'])
 _RESPONSE.fields_by_name['info'].containing_oneof = _RESPONSE.oneofs_by_name['value']
-_RESPONSE.oneofs_by_name['value'].fields.append(
-  _RESPONSE.fields_by_name['set_option'])
-_RESPONSE.fields_by_name['set_option'].containing_oneof = _RESPONSE.oneofs_by_name['value']
 _RESPONSE.oneofs_by_name['value'].fields.append(
   _RESPONSE.fields_by_name['init_chain'])
 _RESPONSE.fields_by_name['init_chain'].containing_oneof = _RESPONSE.oneofs_by_name['value']
@@ -2480,7 +2373,6 @@ DESCRIPTOR.message_types_by_name['Request'] = _REQUEST
 DESCRIPTOR.message_types_by_name['RequestEcho'] = _REQUESTECHO
 DESCRIPTOR.message_types_by_name['RequestFlush'] = _REQUESTFLUSH
 DESCRIPTOR.message_types_by_name['RequestInfo'] = _REQUESTINFO
-DESCRIPTOR.message_types_by_name['RequestSetOption'] = _REQUESTSETOPTION
 DESCRIPTOR.message_types_by_name['RequestInitChain'] = _REQUESTINITCHAIN
 DESCRIPTOR.message_types_by_name['RequestQuery'] = _REQUESTQUERY
 DESCRIPTOR.message_types_by_name['RequestBeginBlock'] = _REQUESTBEGINBLOCK
@@ -2497,7 +2389,6 @@ DESCRIPTOR.message_types_by_name['ResponseException'] = _RESPONSEEXCEPTION
 DESCRIPTOR.message_types_by_name['ResponseEcho'] = _RESPONSEECHO
 DESCRIPTOR.message_types_by_name['ResponseFlush'] = _RESPONSEFLUSH
 DESCRIPTOR.message_types_by_name['ResponseInfo'] = _RESPONSEINFO
-DESCRIPTOR.message_types_by_name['ResponseSetOption'] = _RESPONSESETOPTION
 DESCRIPTOR.message_types_by_name['ResponseInitChain'] = _RESPONSEINITCHAIN
 DESCRIPTOR.message_types_by_name['ResponseQuery'] = _RESPONSEQUERY
 DESCRIPTOR.message_types_by_name['ResponseBeginBlock'] = _RESPONSEBEGINBLOCK
@@ -2551,13 +2442,6 @@ RequestInfo = _reflection.GeneratedProtocolMessageType('RequestInfo', (_message.
   # @@protoc_insertion_point(class_scope:tendermint.abci.RequestInfo)
   })
 _sym_db.RegisterMessage(RequestInfo)
-
-RequestSetOption = _reflection.GeneratedProtocolMessageType('RequestSetOption', (_message.Message,), {
-  'DESCRIPTOR' : _REQUESTSETOPTION,
-  '__module__' : 'tendermint.abci.types_pb2'
-  # @@protoc_insertion_point(class_scope:tendermint.abci.RequestSetOption)
-  })
-_sym_db.RegisterMessage(RequestSetOption)
 
 RequestInitChain = _reflection.GeneratedProtocolMessageType('RequestInitChain', (_message.Message,), {
   'DESCRIPTOR' : _REQUESTINITCHAIN,
@@ -2670,13 +2554,6 @@ ResponseInfo = _reflection.GeneratedProtocolMessageType('ResponseInfo', (_messag
   # @@protoc_insertion_point(class_scope:tendermint.abci.ResponseInfo)
   })
 _sym_db.RegisterMessage(ResponseInfo)
-
-ResponseSetOption = _reflection.GeneratedProtocolMessageType('ResponseSetOption', (_message.Message,), {
-  'DESCRIPTOR' : _RESPONSESETOPTION,
-  '__module__' : 'tendermint.abci.types_pb2'
-  # @@protoc_insertion_point(class_scope:tendermint.abci.ResponseSetOption)
-  })
-_sym_db.RegisterMessage(ResponseSetOption)
 
 ResponseInitChain = _reflection.GeneratedProtocolMessageType('ResponseInitChain', (_message.Message,), {
   'DESCRIPTOR' : _RESPONSEINITCHAIN,
@@ -2862,8 +2739,8 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=6448,
-  serialized_end=7731,
+  serialized_start=6223,
+  serialized_end=7422,
   methods=[
   _descriptor.MethodDescriptor(
     name='Echo',
@@ -2896,19 +2773,9 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
     create_key=_descriptor._internal_create_key,
   ),
   _descriptor.MethodDescriptor(
-    name='SetOption',
-    full_name='tendermint.abci.ABCIApplication.SetOption',
-    index=3,
-    containing_service=None,
-    input_type=_REQUESTSETOPTION,
-    output_type=_RESPONSESETOPTION,
-    serialized_options=None,
-    create_key=_descriptor._internal_create_key,
-  ),
-  _descriptor.MethodDescriptor(
     name='DeliverTx',
     full_name='tendermint.abci.ABCIApplication.DeliverTx',
-    index=4,
+    index=3,
     containing_service=None,
     input_type=_REQUESTDELIVERTX,
     output_type=_RESPONSEDELIVERTX,
@@ -2918,7 +2785,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='CheckTx',
     full_name='tendermint.abci.ABCIApplication.CheckTx',
-    index=5,
+    index=4,
     containing_service=None,
     input_type=_REQUESTCHECKTX,
     output_type=_RESPONSECHECKTX,
@@ -2928,7 +2795,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Query',
     full_name='tendermint.abci.ABCIApplication.Query',
-    index=6,
+    index=5,
     containing_service=None,
     input_type=_REQUESTQUERY,
     output_type=_RESPONSEQUERY,
@@ -2938,7 +2805,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='Commit',
     full_name='tendermint.abci.ABCIApplication.Commit',
-    index=7,
+    index=6,
     containing_service=None,
     input_type=_REQUESTCOMMIT,
     output_type=_RESPONSECOMMIT,
@@ -2948,7 +2815,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='InitChain',
     full_name='tendermint.abci.ABCIApplication.InitChain',
-    index=8,
+    index=7,
     containing_service=None,
     input_type=_REQUESTINITCHAIN,
     output_type=_RESPONSEINITCHAIN,
@@ -2958,7 +2825,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='BeginBlock',
     full_name='tendermint.abci.ABCIApplication.BeginBlock',
-    index=9,
+    index=8,
     containing_service=None,
     input_type=_REQUESTBEGINBLOCK,
     output_type=_RESPONSEBEGINBLOCK,
@@ -2968,7 +2835,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='EndBlock',
     full_name='tendermint.abci.ABCIApplication.EndBlock',
-    index=10,
+    index=9,
     containing_service=None,
     input_type=_REQUESTENDBLOCK,
     output_type=_RESPONSEENDBLOCK,
@@ -2978,7 +2845,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='ListSnapshots',
     full_name='tendermint.abci.ABCIApplication.ListSnapshots',
-    index=11,
+    index=10,
     containing_service=None,
     input_type=_REQUESTLISTSNAPSHOTS,
     output_type=_RESPONSELISTSNAPSHOTS,
@@ -2988,7 +2855,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='OfferSnapshot',
     full_name='tendermint.abci.ABCIApplication.OfferSnapshot',
-    index=12,
+    index=11,
     containing_service=None,
     input_type=_REQUESTOFFERSNAPSHOT,
     output_type=_RESPONSEOFFERSNAPSHOT,
@@ -2998,7 +2865,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='LoadSnapshotChunk',
     full_name='tendermint.abci.ABCIApplication.LoadSnapshotChunk',
-    index=13,
+    index=12,
     containing_service=None,
     input_type=_REQUESTLOADSNAPSHOTCHUNK,
     output_type=_RESPONSELOADSNAPSHOTCHUNK,
@@ -3008,7 +2875,7 @@ _ABCIAPPLICATION = _descriptor.ServiceDescriptor(
   _descriptor.MethodDescriptor(
     name='ApplySnapshotChunk',
     full_name='tendermint.abci.ABCIApplication.ApplySnapshotChunk',
-    index=14,
+    index=13,
     containing_service=None,
     input_type=_REQUESTAPPLYSNAPSHOTCHUNK,
     output_type=_RESPONSEAPPLYSNAPSHOTCHUNK,

@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 import cosmos.staking.v1beta1.query_pb2 
 import cosmos.staking.v1beta1.query_pb2_grpc
 import cosmos.bank.v1beta1.tx_pb2

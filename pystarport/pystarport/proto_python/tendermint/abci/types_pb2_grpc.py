@@ -32,11 +32,6 @@ class ABCIApplicationStub(object):
                 request_serializer=tendermint_dot_abci_dot_types__pb2.RequestInfo.SerializeToString,
                 response_deserializer=tendermint_dot_abci_dot_types__pb2.ResponseInfo.FromString,
                 )
-        self.SetOption = channel.unary_unary(
-                '/tendermint.abci.ABCIApplication/SetOption',
-                request_serializer=tendermint_dot_abci_dot_types__pb2.RequestSetOption.SerializeToString,
-                response_deserializer=tendermint_dot_abci_dot_types__pb2.ResponseSetOption.FromString,
-                )
         self.DeliverTx = channel.unary_unary(
                 '/tendermint.abci.ABCIApplication/DeliverTx',
                 request_serializer=tendermint_dot_abci_dot_types__pb2.RequestDeliverTx.SerializeToString,
@@ -113,12 +108,6 @@ class ABCIApplicationServicer(object):
         raise NotImplementedError('Method not implemented!')
 
     def Info(self, request, context):
-        """Missing associated documentation comment in .proto file."""
-        context.set_code(grpc.StatusCode.UNIMPLEMENTED)
-        context.set_details('Method not implemented!')
-        raise NotImplementedError('Method not implemented!')
-
-    def SetOption(self, request, context):
         """Missing associated documentation comment in .proto file."""
         context.set_code(grpc.StatusCode.UNIMPLEMENTED)
         context.set_details('Method not implemented!')
@@ -207,11 +196,6 @@ def add_ABCIApplicationServicer_to_server(servicer, server):
                     servicer.Info,
                     request_deserializer=tendermint_dot_abci_dot_types__pb2.RequestInfo.FromString,
                     response_serializer=tendermint_dot_abci_dot_types__pb2.ResponseInfo.SerializeToString,
-            ),
-            'SetOption': grpc.unary_unary_rpc_method_handler(
-                    servicer.SetOption,
-                    request_deserializer=tendermint_dot_abci_dot_types__pb2.RequestSetOption.FromString,
-                    response_serializer=tendermint_dot_abci_dot_types__pb2.ResponseSetOption.SerializeToString,
             ),
             'DeliverTx': grpc.unary_unary_rpc_method_handler(
                     servicer.DeliverTx,
@@ -329,23 +313,6 @@ class ABCIApplication(object):
         return grpc.experimental.unary_unary(request, target, '/tendermint.abci.ABCIApplication/Info',
             tendermint_dot_abci_dot_types__pb2.RequestInfo.SerializeToString,
             tendermint_dot_abci_dot_types__pb2.ResponseInfo.FromString,
-            options, channel_credentials,
-            insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
-
-    @staticmethod
-    def SetOption(request,
-            target,
-            options=(),
-            channel_credentials=None,
-            call_credentials=None,
-            insecure=False,
-            compression=None,
-            wait_for_ready=None,
-            timeout=None,
-            metadata=None):
-        return grpc.experimental.unary_unary(request, target, '/tendermint.abci.ABCIApplication/SetOption',
-            tendermint_dot_abci_dot_types__pb2.RequestSetOption.SerializeToString,
-            tendermint_dot_abci_dot_types__pb2.ResponseSetOption.FromString,
             options, channel_credentials,
             insecure, call_credentials, compression, wait_for_ready, timeout, metadata)
 
