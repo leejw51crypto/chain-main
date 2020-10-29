@@ -3,7 +3,6 @@ import tendermint.rpc.grpc.types_pb2_grpc
 import cosmos.tx.v1beta1.tx_pb2
 import grpc
 import json
-import base64
 from cosmos.tx.v1beta1.tx_pb2 import Tx, TxBody, AuthInfo,TxRaw
 
 def send(tx):
@@ -14,20 +13,24 @@ def send(tx):
     response = stub.BroadcastTx(request)
     print(f'reponse={response}')
 
-def show() :
-    print("OK")
-    f = open("sign.txt", "rb")
-    tx=f.read()
-    a=tx.decode('utf-8')
-    b=json.loads(a)
-    c=json.dumps(b, indent=4)
-    print(c)
 
-
-f = open("encode.txt", "rb")
+print("OK")
+f = open("sign.txt", "rb")
 tx=f.read()
 a=tx.decode('utf-8')
-print(a)
-b=base64.b64decode(a)
-print(b)
-send(b)
+b=json.loads(a)
+c=json.dumps(b, indent=4)
+print(c)
+
+txmessages=['0','1']
+txbody= TxBody(memo="abc", messages=txmessages)
+txsignatures= [b'1', b'2']
+txauth= AuthInfo()
+new_tx= Tx(body=txbody, auth_info= txauth,signatures= txsignatures) 
+print(new_tx)
+#print(json.dumps(tx_json, indent=4))
+#print(tx) 
+send(new_tx.SerializeToString())
+#tx =Tx(body=TxBody(memo="ok"))
+#send(tx.SerializeToString())
+#print(tx)
