@@ -24,4 +24,8 @@ mkShell {
       nixpkgs-fmt
       cosmovisor
     ];
+  shellHook = ''
+    # prefer local pystarport directory for development
+    export PYTHONPATH=$PWD/pystarport:$PWD/pystarport/pystarport/proto_python:$PYTHONPATH
+  '';
 }
