@@ -9,6 +9,7 @@ import cosmos.staking.v1beta1.query_pb2_grpc
 import cosmos.bank.v1beta1.tx_pb2
 import cosmos.bank.v1beta1.tx_pb2_grpc
 import grpc
+import json
 
 def test_query_validators(cluster):    
     print("go!")
@@ -20,5 +21,6 @@ def test_query_validators(cluster):
     channel= grpc.insecure_channel(ipport)
     stub= cosmos.staking.v1beta1.query_pb2_grpc.QueryStub(channel)
     response=stub.Validators( cosmos.staking.v1beta1.query_pb2.QueryValidatorsRequest())
+    #f= json.dumps(response, indent=4)
     print(f'response={response}')
     assert  False

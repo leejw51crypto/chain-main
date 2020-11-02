@@ -13,10 +13,12 @@ _sym_db = _symbol_database.Default()
 
 
 from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
-from tendermint.types import types_pb2 as tendermint_dot_types_dot_types__pb2
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
 from google.protobuf import duration_pb2 as google_dot_protobuf_dot_duration__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
 from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
+from tendermint.types import types_pb2 as tendermint_dot_types_dot_types__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -25,9 +27,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z,github.com/cosmos/cosmos-sdk/x/staking/types',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n$cosmos/staking/v1beta1/staking.proto\x12\x16\x63osmos.staking.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1ctendermint/types/types.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\"y\n\x0eHistoricalInfo\x12.\n\x06header\x18\x01 \x01(\x0b\x32\x18.tendermint.types.HeaderB\x04\xc8\xde\x1f\x00\x12\x37\n\x06valset\x18\x02 \x03(\x0b\x32!.cosmos.staking.v1beta1.ValidatorB\x04\xc8\xde\x1f\x00\"\x91\x02\n\x0f\x43ommissionRates\x12<\n\x04rate\x18\x01 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12S\n\x08max_rate\x18\x02 \x01(\tBA\xf2\xde\x1f\x0fyaml:\"max_rate\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12\x61\n\x0fmax_change_rate\x18\x03 \x01(\tBH\xf2\xde\x1f\x16yaml:\"max_change_rate\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\xb4\x01\n\nCommission\x12K\n\x10\x63ommission_rates\x18\x01 \x01(\x0b\x32\'.cosmos.staking.v1beta1.CommissionRatesB\x08\xd0\xde\x1f\x01\xc8\xde\x1f\x00\x12O\n\x0bupdate_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x1e\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x12yaml:\"update_time\":\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x93\x01\n\x0b\x44\x65scription\x12\x0f\n\x07moniker\x18\x01 \x01(\t\x12\x10\n\x08identity\x18\x02 \x01(\t\x12\x0f\n\x07website\x18\x03 \x01(\t\x12\x35\n\x10security_contact\x18\x04 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"security_contact\"\x12\x0f\n\x07\x64\x65tails\x18\x05 \x01(\t:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\xe7\x05\n\tValidator\x12\x35\n\x10operator_address\x18\x01 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"operator_address\"\x12\x35\n\x10\x63onsensus_pubkey\x18\x02 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"consensus_pubkey\"\x12\x0e\n\x06jailed\x18\x03 \x01(\x08\x12\x32\n\x06status\x18\x04 \x01(\x0e\x32\".cosmos.staking.v1beta1.BondStatus\x12>\n\x06tokens\x18\x05 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\x12\x63\n\x10\x64\x65legator_shares\x18\x06 \x01(\tBI\xf2\xde\x1f\x17yaml:\"delegator_shares\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12>\n\x0b\x64\x65scription\x18\x07 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12\x35\n\x10unbonding_height\x18\x08 \x01(\x03\x42\x1b\xf2\xde\x1f\x17yaml:\"unbonding_height\"\x12U\n\x0eunbonding_time\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB!\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x15yaml:\"unbonding_time\"\x12<\n\ncommission\x18\n \x01(\x0b\x32\".cosmos.staking.v1beta1.CommissionB\x04\xc8\xde\x1f\x00\x12i\n\x13min_self_delegation\x18\x0b \x01(\tBL\xf2\xde\x1f\x1ayaml:\"min_self_delegation\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x98\xa0\x1f\x00\x88\xa0\x1f\x00\"+\n\x0cValAddresses\x12\x11\n\taddresses\x18\x01 \x03(\t:\x08\x98\xa0\x1f\x00\x80\xdc \x01\"\x88\x01\n\x06\x44VPair\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\":\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\">\n\x07\x44VPairs\x12\x33\n\x05pairs\x18\x01 \x03(\x0b\x32\x1e.cosmos.staking.v1beta1.DVPairB\x04\xc8\xde\x1f\x00\"\xd5\x01\n\nDVVTriplet\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\":\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"I\n\x0b\x44VVTriplets\x12:\n\x08triplets\x18\x01 \x03(\x0b\x32\".cosmos.staking.v1beta1.DVVTripletB\x04\xc8\xde\x1f\x00\"\xcc\x01\n\nDelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12>\n\x06shares\x18\x03 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xde\x01\n\x13UnbondingDelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12G\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.cosmos.staking.v1beta1.UnbondingDelegationEntryB\x04\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xd6\x02\n\x18UnbondingDelegationEntry\x12\x33\n\x0f\x63reation_height\x18\x01 \x01(\x03\x42\x1a\xf2\xde\x1f\x16yaml:\"creation_height\"\x12W\n\x0f\x63ompletion_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\"\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x16yaml:\"completion_time\"\x12\x61\n\x0finitial_balance\x18\x03 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x16yaml:\"initial_balance\"\x12?\n\x07\x62\x61lance\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\xd2\x02\n\x11RedelegationEntry\x12\x33\n\x0f\x63reation_height\x18\x01 \x01(\x03\x42\x1a\xf2\xde\x1f\x16yaml:\"creation_height\"\x12W\n\x0f\x63ompletion_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\"\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x16yaml:\"completion_time\"\x12\x61\n\x0finitial_balance\x18\x03 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x16yaml:\"initial_balance\"\x12\x42\n\nshares_dst\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x99\x02\n\x0cRedelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\"\x12@\n\x07\x65ntries\x18\x04 \x03(\x0b\x32).cosmos.staking.v1beta1.RedelegationEntryB\x04\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xae\x02\n\x06Params\x12T\n\x0eunbonding_time\x18\x01 \x01(\x0b\x32\x19.google.protobuf.DurationB!\xc8\xde\x1f\x00\x98\xdf\x1f\x01\xf2\xde\x1f\x15yaml:\"unbonding_time\"\x12\x31\n\x0emax_validators\x18\x02 \x01(\rB\x19\xf2\xde\x1f\x15yaml:\"max_validators\"\x12+\n\x0bmax_entries\x18\x03 \x01(\rB\x16\xf2\xde\x1f\x12yaml:\"max_entries\"\x12\x39\n\x12historical_entries\x18\x04 \x01(\rB\x1d\xf2\xde\x1f\x19yaml:\"historical_entries\"\x12)\n\nbond_denom\x18\x05 \x01(\tB\x15\xf2\xde\x1f\x11yaml:\"bond_denom\":\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x8e\x01\n\x12\x44\x65legationResponse\x12<\n\ndelegation\x18\x01 \x01(\x0b\x32\".cosmos.staking.v1beta1.DelegationB\x04\xc8\xde\x1f\x00\x12\x30\n\x07\x62\x61lance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x98\xa0\x1f\x00\"\xaf\x01\n\x19RedelegationEntryResponse\x12K\n\x12redelegation_entry\x18\x01 \x01(\x0b\x32).cosmos.staking.v1beta1.RedelegationEntryB\x04\xc8\xde\x1f\x00\x12?\n\x07\x62\x61lance\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x04\xe8\xa0\x1f\x01\"\xa8\x01\n\x14RedelegationResponse\x12@\n\x0credelegation\x18\x01 \x01(\x0b\x32$.cosmos.staking.v1beta1.RedelegationB\x04\xc8\xde\x1f\x00\x12H\n\x07\x65ntries\x18\x02 \x03(\x0b\x32\x31.cosmos.staking.v1beta1.RedelegationEntryResponseB\x04\xc8\xde\x1f\x00:\x04\xe8\xa0\x1f\x00\"\xe0\x01\n\x04Pool\x12^\n\x11not_bonded_tokens\x18\x01 \x01(\tBC\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xea\xde\x1f\x11not_bonded_tokens\xc8\xde\x1f\x00\x12n\n\rbonded_tokens\x18\x02 \x01(\tBW\xea\xde\x1f\rbonded_tokens\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"bonded_tokens\":\x08\xf0\xa0\x1f\x01\xe8\xa0\x1f\x01*\xb6\x01\n\nBondStatus\x12,\n\x17\x42OND_STATUS_UNSPECIFIED\x10\x00\x1a\x0f\x8a\x9d \x0bUnspecified\x12&\n\x14\x42OND_STATUS_UNBONDED\x10\x01\x1a\x0c\x8a\x9d \x08Unbonded\x12(\n\x15\x42OND_STATUS_UNBONDING\x10\x02\x1a\r\x8a\x9d \tUnbonding\x12\"\n\x12\x42OND_STATUS_BONDED\x10\x03\x1a\n\x8a\x9d \x06\x42onded\x1a\x04\x88\xa3\x1e\x00\x42.Z,github.com/cosmos/cosmos-sdk/x/staking/typesb\x06proto3'
+  serialized_pb=b'\n$cosmos/staking/v1beta1/staking.proto\x12\x16\x63osmos.staking.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x19google/protobuf/any.proto\x1a\x1egoogle/protobuf/duration.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1ctendermint/types/types.proto\"y\n\x0eHistoricalInfo\x12.\n\x06header\x18\x01 \x01(\x0b\x32\x18.tendermint.types.HeaderB\x04\xc8\xde\x1f\x00\x12\x37\n\x06valset\x18\x02 \x03(\x0b\x32!.cosmos.staking.v1beta1.ValidatorB\x04\xc8\xde\x1f\x00\"\x91\x02\n\x0f\x43ommissionRates\x12<\n\x04rate\x18\x01 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12S\n\x08max_rate\x18\x02 \x01(\tBA\xf2\xde\x1f\x0fyaml:\"max_rate\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12\x61\n\x0fmax_change_rate\x18\x03 \x01(\tBH\xf2\xde\x1f\x16yaml:\"max_change_rate\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\xb4\x01\n\nCommission\x12K\n\x10\x63ommission_rates\x18\x01 \x01(\x0b\x32\'.cosmos.staking.v1beta1.CommissionRatesB\x08\xd0\xde\x1f\x01\xc8\xde\x1f\x00\x12O\n\x0bupdate_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x1e\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x12yaml:\"update_time\":\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x93\x01\n\x0b\x44\x65scription\x12\x0f\n\x07moniker\x18\x01 \x01(\t\x12\x10\n\x08identity\x18\x02 \x01(\t\x12\x0f\n\x07website\x18\x03 \x01(\t\x12\x35\n\x10security_contact\x18\x04 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"security_contact\"\x12\x0f\n\x07\x64\x65tails\x18\x05 \x01(\t:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x95\x06\n\tValidator\x12\x35\n\x10operator_address\x18\x01 \x01(\tB\x1b\xf2\xde\x1f\x17yaml:\"operator_address\"\x12\x63\n\x10\x63onsensus_pubkey\x18\x02 \x01(\x0b\x32\x14.google.protobuf.AnyB3\xca\xb4-\x14\x63osmos.crypto.PubKey\xf2\xde\x1f\x17yaml:\"consensus_pubkey\"\x12\x0e\n\x06jailed\x18\x03 \x01(\x08\x12\x32\n\x06status\x18\x04 \x01(\x0e\x32\".cosmos.staking.v1beta1.BondStatus\x12>\n\x06tokens\x18\x05 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\x12\x63\n\x10\x64\x65legator_shares\x18\x06 \x01(\tBI\xf2\xde\x1f\x17yaml:\"delegator_shares\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00\x12>\n\x0b\x64\x65scription\x18\x07 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12\x35\n\x10unbonding_height\x18\x08 \x01(\x03\x42\x1b\xf2\xde\x1f\x17yaml:\"unbonding_height\"\x12U\n\x0eunbonding_time\x18\t \x01(\x0b\x32\x1a.google.protobuf.TimestampB!\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x15yaml:\"unbonding_time\"\x12<\n\ncommission\x18\n \x01(\x0b\x32\".cosmos.staking.v1beta1.CommissionB\x04\xc8\xde\x1f\x00\x12i\n\x13min_self_delegation\x18\x0b \x01(\tBL\xf2\xde\x1f\x1ayaml:\"min_self_delegation\"\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x98\xa0\x1f\x00\x88\xa0\x1f\x00\"+\n\x0cValAddresses\x12\x11\n\taddresses\x18\x01 \x03(\t:\x08\x98\xa0\x1f\x00\x80\xdc \x01\"\x88\x01\n\x06\x44VPair\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\":\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\">\n\x07\x44VPairs\x12\x33\n\x05pairs\x18\x01 \x03(\x0b\x32\x1e.cosmos.staking.v1beta1.DVPairB\x04\xc8\xde\x1f\x00\"\xd5\x01\n\nDVVTriplet\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\":\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"I\n\x0b\x44VVTriplets\x12:\n\x08triplets\x18\x01 \x03(\x0b\x32\".cosmos.staking.v1beta1.DVVTripletB\x04\xc8\xde\x1f\x00\"\xcc\x01\n\nDelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12>\n\x06shares\x18\x03 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xde\x01\n\x13UnbondingDelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12G\n\x07\x65ntries\x18\x03 \x03(\x0b\x32\x30.cosmos.staking.v1beta1.UnbondingDelegationEntryB\x04\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xd6\x02\n\x18UnbondingDelegationEntry\x12\x33\n\x0f\x63reation_height\x18\x01 \x01(\x03\x42\x1a\xf2\xde\x1f\x16yaml:\"creation_height\"\x12W\n\x0f\x63ompletion_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\"\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x16yaml:\"completion_time\"\x12\x61\n\x0finitial_balance\x18\x03 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x16yaml:\"initial_balance\"\x12?\n\x07\x62\x61lance\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\xd2\x02\n\x11RedelegationEntry\x12\x33\n\x0f\x63reation_height\x18\x01 \x01(\x03\x42\x1a\xf2\xde\x1f\x16yaml:\"creation_height\"\x12W\n\x0f\x63ompletion_time\x18\x02 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\"\xc8\xde\x1f\x00\x90\xdf\x1f\x01\xf2\xde\x1f\x16yaml:\"completion_time\"\x12\x61\n\x0finitial_balance\x18\x03 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x16yaml:\"initial_balance\"\x12\x42\n\nshares_dst\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x99\x02\n\x0cRedelegation\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\"\x12@\n\x07\x65ntries\x18\x04 \x03(\x0b\x32).cosmos.staking.v1beta1.RedelegationEntryB\x04\xc8\xde\x1f\x00:\x0c\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\x98\xa0\x1f\x00\"\xae\x02\n\x06Params\x12T\n\x0eunbonding_time\x18\x01 \x01(\x0b\x32\x19.google.protobuf.DurationB!\xc8\xde\x1f\x00\x98\xdf\x1f\x01\xf2\xde\x1f\x15yaml:\"unbonding_time\"\x12\x31\n\x0emax_validators\x18\x02 \x01(\rB\x19\xf2\xde\x1f\x15yaml:\"max_validators\"\x12+\n\x0bmax_entries\x18\x03 \x01(\rB\x16\xf2\xde\x1f\x12yaml:\"max_entries\"\x12\x39\n\x12historical_entries\x18\x04 \x01(\rB\x1d\xf2\xde\x1f\x19yaml:\"historical_entries\"\x12)\n\nbond_denom\x18\x05 \x01(\tB\x15\xf2\xde\x1f\x11yaml:\"bond_denom\":\x08\xe8\xa0\x1f\x01\x98\xa0\x1f\x00\"\x8e\x01\n\x12\x44\x65legationResponse\x12<\n\ndelegation\x18\x01 \x01(\x0b\x32\".cosmos.staking.v1beta1.DelegationB\x04\xc8\xde\x1f\x00\x12\x30\n\x07\x62\x61lance\x18\x02 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x98\xa0\x1f\x00\"\xaf\x01\n\x19RedelegationEntryResponse\x12K\n\x12redelegation_entry\x18\x01 \x01(\x0b\x32).cosmos.staking.v1beta1.RedelegationEntryB\x04\xc8\xde\x1f\x00\x12?\n\x07\x62\x61lance\x18\x04 \x01(\tB.\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00:\x04\xe8\xa0\x1f\x01\"\xa8\x01\n\x14RedelegationResponse\x12@\n\x0credelegation\x18\x01 \x01(\x0b\x32$.cosmos.staking.v1beta1.RedelegationB\x04\xc8\xde\x1f\x00\x12H\n\x07\x65ntries\x18\x02 \x03(\x0b\x32\x31.cosmos.staking.v1beta1.RedelegationEntryResponseB\x04\xc8\xde\x1f\x00:\x04\xe8\xa0\x1f\x00\"\xe0\x01\n\x04Pool\x12^\n\x11not_bonded_tokens\x18\x01 \x01(\tBC\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xea\xde\x1f\x11not_bonded_tokens\xc8\xde\x1f\x00\x12n\n\rbonded_tokens\x18\x02 \x01(\tBW\xea\xde\x1f\rbonded_tokens\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xc8\xde\x1f\x00\xf2\xde\x1f\x14yaml:\"bonded_tokens\":\x08\xf0\xa0\x1f\x01\xe8\xa0\x1f\x01*\xb6\x01\n\nBondStatus\x12,\n\x17\x42OND_STATUS_UNSPECIFIED\x10\x00\x1a\x0f\x8a\x9d \x0bUnspecified\x12&\n\x14\x42OND_STATUS_UNBONDED\x10\x01\x1a\x0c\x8a\x9d \x08Unbonded\x12(\n\x15\x42OND_STATUS_UNBONDING\x10\x02\x1a\r\x8a\x9d \tUnbonding\x12\"\n\x12\x42OND_STATUS_BONDED\x10\x03\x1a\n\x8a\x9d \x06\x42onded\x1a\x04\x88\xa3\x1e\x00\x42.Z,github.com/cosmos/cosmos-sdk/x/staking/typesb\x06proto3'
   ,
-  dependencies=[gogoproto_dot_gogo__pb2.DESCRIPTOR,tendermint_dot_types_dot_types__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,cosmos_dot_base_dot_v1beta1_dot_coin__pb2.DESCRIPTOR,])
+  dependencies=[gogoproto_dot_gogo__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_duration__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,cosmos__proto_dot_cosmos__pb2.DESCRIPTOR,cosmos_dot_base_dot_v1beta1_dot_coin__pb2.DESCRIPTOR,tendermint_dot_types_dot_types__pb2.DESCRIPTOR,])
 
 _BONDSTATUS = _descriptor.EnumDescriptor(
   name='BondStatus',
@@ -59,8 +61,8 @@ _BONDSTATUS = _descriptor.EnumDescriptor(
   ],
   containing_type=None,
   serialized_options=b'\210\243\036\000',
-  serialized_start=4659,
-  serialized_end=4841,
+  serialized_start=4759,
+  serialized_end=4941,
 )
 _sym_db.RegisterEnumDescriptor(_BONDSTATUS)
 
@@ -106,8 +108,8 @@ _HISTORICALINFO = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=213,
-  serialized_end=334,
+  serialized_start=267,
+  serialized_end=388,
 )
 
 
@@ -152,8 +154,8 @@ _COMMISSIONRATES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=337,
-  serialized_end=610,
+  serialized_start=391,
+  serialized_end=664,
 )
 
 
@@ -191,8 +193,8 @@ _COMMISSION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=613,
-  serialized_end=793,
+  serialized_start=667,
+  serialized_end=847,
 )
 
 
@@ -251,8 +253,8 @@ _DESCRIPTION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=796,
-  serialized_end=943,
+  serialized_start=850,
+  serialized_end=997,
 )
 
 
@@ -273,11 +275,11 @@ _VALIDATOR = _descriptor.Descriptor(
       serialized_options=b'\362\336\037\027yaml:\"operator_address\"', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='consensus_pubkey', full_name='cosmos.staking.v1beta1.Validator.consensus_pubkey', index=1,
-      number=2, type=9, cpp_type=9, label=1,
-      has_default_value=False, default_value=b"".decode('utf-8'),
+      number=2, type=11, cpp_type=10, label=1,
+      has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=b'\362\336\037\027yaml:\"consensus_pubkey\"', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\312\264-\024cosmos.crypto.PubKey\362\336\037\027yaml:\"consensus_pubkey\"', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='jailed', full_name='cosmos.staking.v1beta1.Validator.jailed', index=2,
       number=3, type=8, cpp_type=7, label=1,
@@ -353,8 +355,8 @@ _VALIDATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=946,
-  serialized_end=1689,
+  serialized_start=1000,
+  serialized_end=1789,
 )
 
 
@@ -385,8 +387,8 @@ _VALADDRESSES = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1691,
-  serialized_end=1734,
+  serialized_start=1791,
+  serialized_end=1834,
 )
 
 
@@ -424,8 +426,8 @@ _DVPAIR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1737,
-  serialized_end=1873,
+  serialized_start=1837,
+  serialized_end=1973,
 )
 
 
@@ -456,8 +458,8 @@ _DVPAIRS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1875,
-  serialized_end=1937,
+  serialized_start=1975,
+  serialized_end=2037,
 )
 
 
@@ -502,8 +504,8 @@ _DVVTRIPLET = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1940,
-  serialized_end=2153,
+  serialized_start=2040,
+  serialized_end=2253,
 )
 
 
@@ -534,8 +536,8 @@ _DVVTRIPLETS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2155,
-  serialized_end=2228,
+  serialized_start=2255,
+  serialized_end=2328,
 )
 
 
@@ -580,8 +582,8 @@ _DELEGATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2231,
-  serialized_end=2435,
+  serialized_start=2331,
+  serialized_end=2535,
 )
 
 
@@ -626,8 +628,8 @@ _UNBONDINGDELEGATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2438,
-  serialized_end=2660,
+  serialized_start=2538,
+  serialized_end=2760,
 )
 
 
@@ -679,8 +681,8 @@ _UNBONDINGDELEGATIONENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=2663,
-  serialized_end=3005,
+  serialized_start=2763,
+  serialized_end=3105,
 )
 
 
@@ -732,8 +734,8 @@ _REDELEGATIONENTRY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3008,
-  serialized_end=3346,
+  serialized_start=3108,
+  serialized_end=3446,
 )
 
 
@@ -785,8 +787,8 @@ _REDELEGATION = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3349,
-  serialized_end=3630,
+  serialized_start=3449,
+  serialized_end=3730,
 )
 
 
@@ -845,8 +847,8 @@ _PARAMS = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3633,
-  serialized_end=3935,
+  serialized_start=3733,
+  serialized_end=4035,
 )
 
 
@@ -884,8 +886,8 @@ _DELEGATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=3938,
-  serialized_end=4080,
+  serialized_start=4038,
+  serialized_end=4180,
 )
 
 
@@ -923,8 +925,8 @@ _REDELEGATIONENTRYRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4083,
-  serialized_end=4258,
+  serialized_start=4183,
+  serialized_end=4358,
 )
 
 
@@ -962,8 +964,8 @@ _REDELEGATIONRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4261,
-  serialized_end=4429,
+  serialized_start=4361,
+  serialized_end=4529,
 )
 
 
@@ -1001,14 +1003,15 @@ _POOL = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=4432,
-  serialized_end=4656,
+  serialized_start=4532,
+  serialized_end=4756,
 )
 
 _HISTORICALINFO.fields_by_name['header'].message_type = tendermint_dot_types_dot_types__pb2._HEADER
 _HISTORICALINFO.fields_by_name['valset'].message_type = _VALIDATOR
 _COMMISSION.fields_by_name['commission_rates'].message_type = _COMMISSIONRATES
 _COMMISSION.fields_by_name['update_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP
+_VALIDATOR.fields_by_name['consensus_pubkey'].message_type = google_dot_protobuf_dot_any__pb2._ANY
 _VALIDATOR.fields_by_name['status'].enum_type = _BONDSTATUS
 _VALIDATOR.fields_by_name['description'].message_type = _DESCRIPTION
 _VALIDATOR.fields_by_name['unbonding_time'].message_type = google_dot_protobuf_dot_timestamp__pb2._TIMESTAMP

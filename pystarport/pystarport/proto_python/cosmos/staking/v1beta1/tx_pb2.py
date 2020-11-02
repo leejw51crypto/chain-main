@@ -11,11 +11,12 @@ from google.protobuf import symbol_database as _symbol_database
 _sym_db = _symbol_database.Default()
 
 
-from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
-from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
-from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
-from cosmos.staking.v1beta1 import staking_pb2 as cosmos_dot_staking_dot_v1beta1_dot_staking__pb2
 from google.protobuf import any_pb2 as google_dot_protobuf_dot_any__pb2
+from google.protobuf import timestamp_pb2 as google_dot_protobuf_dot_timestamp__pb2
+from gogoproto import gogo_pb2 as gogoproto_dot_gogo__pb2
+from cosmos_proto import cosmos_pb2 as cosmos__proto_dot_cosmos__pb2
+from cosmos.base.v1beta1 import coin_pb2 as cosmos_dot_base_dot_v1beta1_dot_coin__pb2
+from cosmos.staking.v1beta1 import staking_pb2 as cosmos_dot_staking_dot_v1beta1_dot_staking__pb2
 
 
 DESCRIPTOR = _descriptor.FileDescriptor(
@@ -24,9 +25,9 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z,github.com/cosmos/cosmos-sdk/x/staking/types',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n\x1f\x63osmos/staking/v1beta1/tx.proto\x12\x16\x63osmos.staking.v1beta1\x1a\x14gogoproto/gogo.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a$cosmos/staking/v1beta1/staking.proto\x1a\x19google/protobuf/any.proto\"\xd4\x03\n\x12MsgCreateValidator\x12>\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12\x41\n\ncommission\x18\x02 \x01(\x0b\x32\'.cosmos.staking.v1beta1.CommissionRatesB\x04\xc8\xde\x1f\x00\x12i\n\x13min_self_delegation\x18\x03 \x01(\tBL\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x1ayaml:\"min_self_delegation\"\xc8\xde\x1f\x00\x12\x37\n\x11\x64\x65legator_address\x18\x04 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x05 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12$\n\x06pubkey\x18\x06 \x01(\x0b\x32\x14.google.protobuf.Any\x12.\n\x05value\x18\x07 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x1c\n\x1aMsgCreateValidatorResponse\"\xd1\x02\n\x10MsgEditValidator\x12>\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12-\n\x11validator_address\x18\x02 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"\x12]\n\x0f\x63ommission_rate\x18\x03 \x01(\tBD\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x16yaml:\"commission_rate\"\x12\x65\n\x13min_self_delegation\x18\x04 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x1ayaml:\"min_self_delegation\":\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x1a\n\x18MsgEditValidatorResponse\"\xba\x01\n\x0bMsgDelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12/\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x15\n\x13MsgDelegateResponse\"\x8a\x02\n\x12MsgBeginRedelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\"\x12/\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"[\n\x1aMsgBeginRedelegateResponse\x12=\n\x0f\x63ompletion_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\"\xbc\x01\n\rMsgUndelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12/\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"V\n\x15MsgUndelegateResponse\x12=\n\x0f\x63ompletion_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x32\x9a\x04\n\x03Msg\x12q\n\x0f\x43reateValidator\x12*.cosmos.staking.v1beta1.MsgCreateValidator\x1a\x32.cosmos.staking.v1beta1.MsgCreateValidatorResponse\x12k\n\rEditValidator\x12(.cosmos.staking.v1beta1.MsgEditValidator\x1a\x30.cosmos.staking.v1beta1.MsgEditValidatorResponse\x12\\\n\x08\x44\x65legate\x12#.cosmos.staking.v1beta1.MsgDelegate\x1a+.cosmos.staking.v1beta1.MsgDelegateResponse\x12q\n\x0f\x42\x65ginRedelegate\x12*.cosmos.staking.v1beta1.MsgBeginRedelegate\x1a\x32.cosmos.staking.v1beta1.MsgBeginRedelegateResponse\x12\x62\n\nUndelegate\x12%.cosmos.staking.v1beta1.MsgUndelegate\x1a-.cosmos.staking.v1beta1.MsgUndelegateResponseB.Z,github.com/cosmos/cosmos-sdk/x/staking/typesb\x06proto3'
+  serialized_pb=b'\n\x1f\x63osmos/staking/v1beta1/tx.proto\x12\x16\x63osmos.staking.v1beta1\x1a\x19google/protobuf/any.proto\x1a\x1fgoogle/protobuf/timestamp.proto\x1a\x14gogoproto/gogo.proto\x1a\x19\x63osmos_proto/cosmos.proto\x1a\x1e\x63osmos/base/v1beta1/coin.proto\x1a$cosmos/staking/v1beta1/staking.proto\"\xee\x03\n\x12MsgCreateValidator\x12>\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12\x41\n\ncommission\x18\x02 \x01(\x0b\x32\'.cosmos.staking.v1beta1.CommissionRatesB\x04\xc8\xde\x1f\x00\x12i\n\x13min_self_delegation\x18\x03 \x01(\tBL\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x1ayaml:\"min_self_delegation\"\xc8\xde\x1f\x00\x12\x37\n\x11\x64\x65legator_address\x18\x04 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x05 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12>\n\x06pubkey\x18\x06 \x01(\x0b\x32\x14.google.protobuf.AnyB\x18\xca\xb4-\x14\x63osmos.crypto.PubKey\x12.\n\x05value\x18\x07 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x1c\n\x1aMsgCreateValidatorResponse\"\xd1\x02\n\x10MsgEditValidator\x12>\n\x0b\x64\x65scription\x18\x01 \x01(\x0b\x32#.cosmos.staking.v1beta1.DescriptionB\x04\xc8\xde\x1f\x00\x12-\n\x11validator_address\x18\x02 \x01(\tB\x12\xf2\xde\x1f\x0eyaml:\"address\"\x12]\n\x0f\x63ommission_rate\x18\x03 \x01(\tBD\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Dec\xf2\xde\x1f\x16yaml:\"commission_rate\"\x12\x65\n\x13min_self_delegation\x18\x04 \x01(\tBH\xda\xde\x1f&github.com/cosmos/cosmos-sdk/types.Int\xf2\xde\x1f\x1ayaml:\"min_self_delegation\":\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x1a\n\x18MsgEditValidatorResponse\"\xba\x01\n\x0bMsgDelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12/\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"\x15\n\x13MsgDelegateResponse\"\x8a\x02\n\x12MsgBeginRedelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12?\n\x15validator_src_address\x18\x02 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_src_address\"\x12?\n\x15validator_dst_address\x18\x03 \x01(\tB \xf2\xde\x1f\x1cyaml:\"validator_dst_address\"\x12/\n\x06\x61mount\x18\x04 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"[\n\x1aMsgBeginRedelegateResponse\x12=\n\x0f\x63ompletion_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\"\xbc\x01\n\rMsgUndelegate\x12\x37\n\x11\x64\x65legator_address\x18\x01 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"delegator_address\"\x12\x37\n\x11validator_address\x18\x02 \x01(\tB\x1c\xf2\xde\x1f\x18yaml:\"validator_address\"\x12/\n\x06\x61mount\x18\x03 \x01(\x0b\x32\x19.cosmos.base.v1beta1.CoinB\x04\xc8\xde\x1f\x00:\x08\xe8\xa0\x1f\x00\x88\xa0\x1f\x00\"V\n\x15MsgUndelegateResponse\x12=\n\x0f\x63ompletion_time\x18\x01 \x01(\x0b\x32\x1a.google.protobuf.TimestampB\x08\xc8\xde\x1f\x00\x90\xdf\x1f\x01\x32\x9a\x04\n\x03Msg\x12q\n\x0f\x43reateValidator\x12*.cosmos.staking.v1beta1.MsgCreateValidator\x1a\x32.cosmos.staking.v1beta1.MsgCreateValidatorResponse\x12k\n\rEditValidator\x12(.cosmos.staking.v1beta1.MsgEditValidator\x1a\x30.cosmos.staking.v1beta1.MsgEditValidatorResponse\x12\\\n\x08\x44\x65legate\x12#.cosmos.staking.v1beta1.MsgDelegate\x1a+.cosmos.staking.v1beta1.MsgDelegateResponse\x12q\n\x0f\x42\x65ginRedelegate\x12*.cosmos.staking.v1beta1.MsgBeginRedelegate\x1a\x32.cosmos.staking.v1beta1.MsgBeginRedelegateResponse\x12\x62\n\nUndelegate\x12%.cosmos.staking.v1beta1.MsgUndelegate\x1a-.cosmos.staking.v1beta1.MsgUndelegateResponseB.Z,github.com/cosmos/cosmos-sdk/x/staking/typesb\x06proto3'
   ,
-  dependencies=[gogoproto_dot_gogo__pb2.DESCRIPTOR,cosmos_dot_base_dot_v1beta1_dot_coin__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,cosmos_dot_staking_dot_v1beta1_dot_staking__pb2.DESCRIPTOR,google_dot_protobuf_dot_any__pb2.DESCRIPTOR,])
+  dependencies=[google_dot_protobuf_dot_any__pb2.DESCRIPTOR,google_dot_protobuf_dot_timestamp__pb2.DESCRIPTOR,gogoproto_dot_gogo__pb2.DESCRIPTOR,cosmos__proto_dot_cosmos__pb2.DESCRIPTOR,cosmos_dot_base_dot_v1beta1_dot_coin__pb2.DESCRIPTOR,cosmos_dot_staking_dot_v1beta1_dot_staking__pb2.DESCRIPTOR,])
 
 
 
@@ -80,7 +81,7 @@ _MSGCREATEVALIDATOR = _descriptor.Descriptor(
       has_default_value=False, default_value=None,
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\312\264-\024cosmos.crypto.PubKey', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
     _descriptor.FieldDescriptor(
       name='value', full_name='cosmos.staking.v1beta1.MsgCreateValidator.value', index=6,
       number=7, type=11, cpp_type=10, label=1,
@@ -100,8 +101,8 @@ _MSGCREATEVALIDATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=212,
-  serialized_end=680,
+  serialized_start=239,
+  serialized_end=733,
 )
 
 
@@ -125,8 +126,8 @@ _MSGCREATEVALIDATORRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=682,
-  serialized_end=710,
+  serialized_start=735,
+  serialized_end=763,
 )
 
 
@@ -178,8 +179,8 @@ _MSGEDITVALIDATOR = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=713,
-  serialized_end=1050,
+  serialized_start=766,
+  serialized_end=1103,
 )
 
 
@@ -203,8 +204,8 @@ _MSGEDITVALIDATORRESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1052,
-  serialized_end=1078,
+  serialized_start=1105,
+  serialized_end=1131,
 )
 
 
@@ -249,8 +250,8 @@ _MSGDELEGATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1081,
-  serialized_end=1267,
+  serialized_start=1134,
+  serialized_end=1320,
 )
 
 
@@ -274,8 +275,8 @@ _MSGDELEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1269,
-  serialized_end=1290,
+  serialized_start=1322,
+  serialized_end=1343,
 )
 
 
@@ -327,8 +328,8 @@ _MSGBEGINREDELEGATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1293,
-  serialized_end=1559,
+  serialized_start=1346,
+  serialized_end=1612,
 )
 
 
@@ -359,8 +360,8 @@ _MSGBEGINREDELEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1561,
-  serialized_end=1652,
+  serialized_start=1614,
+  serialized_end=1705,
 )
 
 
@@ -405,8 +406,8 @@ _MSGUNDELEGATE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1655,
-  serialized_end=1843,
+  serialized_start=1708,
+  serialized_end=1896,
 )
 
 
@@ -437,8 +438,8 @@ _MSGUNDELEGATERESPONSE = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=1845,
-  serialized_end=1931,
+  serialized_start=1898,
+  serialized_end=1984,
 )
 
 _MSGCREATEVALIDATOR.fields_by_name['description'].message_type = cosmos_dot_staking_dot_v1beta1_dot_staking__pb2._DESCRIPTION
@@ -540,6 +541,7 @@ _MSGCREATEVALIDATOR.fields_by_name['commission']._options = None
 _MSGCREATEVALIDATOR.fields_by_name['min_self_delegation']._options = None
 _MSGCREATEVALIDATOR.fields_by_name['delegator_address']._options = None
 _MSGCREATEVALIDATOR.fields_by_name['validator_address']._options = None
+_MSGCREATEVALIDATOR.fields_by_name['pubkey']._options = None
 _MSGCREATEVALIDATOR.fields_by_name['value']._options = None
 _MSGCREATEVALIDATOR._options = None
 _MSGEDITVALIDATOR.fields_by_name['description']._options = None
@@ -570,8 +572,8 @@ _MSG = _descriptor.ServiceDescriptor(
   index=0,
   serialized_options=None,
   create_key=_descriptor._internal_create_key,
-  serialized_start=1934,
-  serialized_end=2472,
+  serialized_start=1987,
+  serialized_end=2525,
   methods=[
   _descriptor.MethodDescriptor(
     name='CreateValidator',

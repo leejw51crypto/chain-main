@@ -20,7 +20,7 @@ DESCRIPTOR = _descriptor.FileDescriptor(
   syntax='proto3',
   serialized_options=b'Z0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519',
   create_key=_descriptor._internal_create_key,
-  serialized_pb=b'\n cosmos/crypto/ed25519/keys.proto\x12\x15\x63osmos.crypto.ed25519\x1a\x14gogoproto/gogo.proto\"\x1b\n\x06PubKey\x12\x0b\n\x03key\x18\x01 \x01(\x0c:\x04\x98\xa0\x1f\x00\"\x16\n\x07PrivKey\x12\x0b\n\x03key\x18\x01 \x01(\x0c\x42\x32Z0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519b\x06proto3'
+  serialized_pb=b'\n cosmos/crypto/ed25519/keys.proto\x12\x15\x63osmos.crypto.ed25519\x1a\x14gogoproto/gogo.proto\"9\n\x06PubKey\x12)\n\x03key\x18\x01 \x01(\x0c\x42\x1c\xfa\xde\x1f\x18\x63rypto/ed25519.PublicKey:\x04\x98\xa0\x1f\x00\"5\n\x07PrivKey\x12*\n\x03key\x18\x01 \x01(\x0c\x42\x1d\xfa\xde\x1f\x19\x63rypto/ed25519.PrivateKeyB2Z0github.com/cosmos/cosmos-sdk/crypto/keys/ed25519b\x06proto3'
   ,
   dependencies=[gogoproto_dot_gogo__pb2.DESCRIPTOR,])
 
@@ -41,7 +41,7 @@ _PUBKEY = _descriptor.Descriptor(
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372\336\037\030crypto/ed25519.PublicKey', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -55,7 +55,7 @@ _PUBKEY = _descriptor.Descriptor(
   oneofs=[
   ],
   serialized_start=81,
-  serialized_end=108,
+  serialized_end=138,
 )
 
 
@@ -73,7 +73,7 @@ _PRIVKEY = _descriptor.Descriptor(
       has_default_value=False, default_value=b"",
       message_type=None, enum_type=None, containing_type=None,
       is_extension=False, extension_scope=None,
-      serialized_options=None, file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
+      serialized_options=b'\372\336\037\031crypto/ed25519.PrivateKey', file=DESCRIPTOR,  create_key=_descriptor._internal_create_key),
   ],
   extensions=[
   ],
@@ -86,8 +86,8 @@ _PRIVKEY = _descriptor.Descriptor(
   extension_ranges=[],
   oneofs=[
   ],
-  serialized_start=110,
-  serialized_end=132,
+  serialized_start=140,
+  serialized_end=193,
 )
 
 DESCRIPTOR.message_types_by_name['PubKey'] = _PUBKEY
@@ -110,5 +110,7 @@ _sym_db.RegisterMessage(PrivKey)
 
 
 DESCRIPTOR._options = None
+_PUBKEY.fields_by_name['key']._options = None
 _PUBKEY._options = None
+_PRIVKEY.fields_by_name['key']._options = None
 # @@protoc_insertion_point(module_scope)
