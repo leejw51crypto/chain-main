@@ -80,6 +80,12 @@ rec {
       (import ./pystarport { inherit pkgs; chaind = "${chain-maind-zemu}/bin/chain-maind"; })
       cosmovisor
     ];
+
+    shellHook = ''
+      # prefer local pystarport directory for development
+      export PYTHONPATH=$PWD/pystarport:$PWD/pystarport/pystarport/proto_python:$PYTHONPATH
+    '';
+
   };
 
   # test in dev-shell will use the chain-maind in PATH
@@ -94,7 +100,7 @@ rec {
 
     shellHook = ''
       # prefer local pystarport directory for development
-      export PYTHONPATH=./pystarport:$PYTHONPATH
+      export PYTHONPATH=$PWD/pystarport:$PWD/pystarport/pystarport/proto_python:$PYTHONPATH
     '';
   };
 }
