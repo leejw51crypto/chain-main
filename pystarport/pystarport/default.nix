@@ -1,13 +1,12 @@
-{ pkgs ? import ../../nix { }, commit ? "" }:
+{ pkgs ? import <nixpkgs> { }, commit ? "" }:
 with pkgs;
-pkgs.mkShell {                                                                                             
-buildInputs = [                                                                                     
-        python38                                                                                      
-        protobuf3_13                                                                                  
-        grpc                                                                                          
-        git                                                                                           
-];                                                                                                  
-shellHook= ''                                                                                       
-  ./convert.sh                                                                                          '';                                                                                                 
+pkgs.mkShell {
+  buildInputs = [
+    python38
+    protobuf3_13
+    grpc
+    git
+  ];
+  shellHook = ''                                                                                       
+  ./convert.sh                                                                                          '';
 }
-
