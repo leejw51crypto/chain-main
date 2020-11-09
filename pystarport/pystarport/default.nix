@@ -1,6 +1,5 @@
-{ pkgs ? import ../../nix { }, commit ? "" }:
-with pkgs;
-pkgs.mkShell {
+with import <nixpkgs> { };
+mkShell {
   buildInputs = [
     python38
     protobuf3_13
