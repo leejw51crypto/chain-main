@@ -1,5 +1,4 @@
 import base64
-import json
 
 import grpc
 
@@ -9,7 +8,6 @@ import cosmos.crypto.ed25519.keys_pb2
 import cosmos.staking.v1beta1.query_pb2
 import cosmos.staking.v1beta1.query_pb2_grpc
 import tendermint.rpc.grpc.types_pb2_grpc
-from cosmos.tx.v1beta1.tx_pb2 import AuthInfo, Tx, TxBody, TxRaw
 
 
 # for query only
