@@ -1,0 +1,6 @@
+export V1=cro1ue30q6xanq2yxvzw72g9fll0q9gz27g5cat5sj
+export V2=cro1ujvhtw2cund92eknx2qyys5zww3q0ad389ddu8
+export S1=cro1vgye9y4jl65328ld68r082svjtmaxg3n4w02j5
+export S2=cro1rqms66rutgt2tc00ql42ukaw34uwxpzt2xjwd4
+export S3=cro1l320uqmk82nu432c0xuz54ktf4f9qmmqd8nhmr
+export VV1=crocncl1ue30q6xanq2yxvzw72g9fll0q9gz27g5msgajw
