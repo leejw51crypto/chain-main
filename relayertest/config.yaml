@@ -1,0 +1,39 @@
+global:
+  api-listen-addr: :5183
+  timeout: 10s
+  light-cache-size: 20
+chains:
+- key: test
+  chain-id: test
+  rpc-addr: http://cheonho:26657
+  account-prefix: cro
+  gas-adjustment: 1.5
+  gas-prices: 100000basecro
+  trusting-period: 400h
+- key: test2
+  chain-id: test2
+  rpc-addr: http://localhost:26657
+  account-prefix: cro
+  gas-adjustment: 1.5
+  gas-prices: 100000basecro
+  trusting-period: 400h
+paths:
+  demo:
+    src:
+      chain-id: test
+      client-id: 07-tendermint-2
+      connection-id: connection-1
+      channel-id: channel-1
+      port-id: transfer
+      order: unordered
+      version: ics20-1
+    dst:
+      chain-id: test2
+      client-id: 07-tendermint-2
+      connection-id: connection-1
+      channel-id: channel-1
+      port-id: transfer
+      order: unordered
+      version: ics20-1
+    strategy:
+      type: naive
