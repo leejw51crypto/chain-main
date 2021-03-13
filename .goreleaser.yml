@@ -3,7 +3,7 @@ before:
   - go mod download
 
 builds:
-  - id: "chain-maind-darwin"
+  - id: "chain-maind-darwin-arm64"
     main: ./cmd/chain-maind
     binary: bin/chain-maind
     env:
