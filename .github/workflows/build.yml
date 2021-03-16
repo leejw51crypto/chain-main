@@ -83,11 +83,6 @@ jobs:
           startsWith(matrix.os, 'ubuntu') &&
           (env.GIT_DIFF != '' || github.event_name == 'issue_comment')
         run: make build
-      - name: buildmac
-        if: |
-          startsWith(matrix.os, 'mac') &&
-          (env.GIT_DIFF != '' || github.event_name == 'issue_comment')
-        run: make build
       - name: buildwindows
         if: |
           startsWith(matrix.os, 'windows') &&
