@@ -6,6 +6,7 @@ on:
     branches:
       - master
       - release/**
+      - feature/406b
   issue_comment:
     types: [created, edited]
 
