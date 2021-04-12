@@ -80,8 +80,7 @@ jobs:
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
       - name: buildwindows
         if: |
-          startsWith(matrix.os, 'windows') &&
-          (env.GIT_DIFF != '' || github.event_name == 'issue_comment')
+          startsWith(matrix.os, 'windows')
         run: makewin.bat
       - name: test
         run: make test
