@@ -87,7 +87,7 @@ jobs:
         if: |
           startsWith(matrix.os, 'windows') &&
           (env.GIT_DIFF != '' || github.event_name == 'issue_comment')
-        run: make buildwindows
+        run: makewin.bat
       - name: test
         run: make test
         if: "env.GIT_DIFF != '' || github.event_name == 'issue_comment'"
