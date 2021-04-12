@@ -81,7 +81,7 @@ jobs:
       - name: buildwindows
         if: |
           startsWith(matrix.os, 'windows')
-        run: makewin.bat
+        run: cd && dir && makewin.bat
       - name: test
         run: make test
         if: "env.GIT_DIFF != '' || github.event_name == 'issue_comment'"
