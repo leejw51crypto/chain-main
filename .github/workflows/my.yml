@@ -1,78 +1,25 @@
 name: Build
 
 on:
-  pull_request:
   push:
     branches:
       - master
       - release/**
       - test
-  issue_comment:
-    types: [created, edited]
 
 jobs:
   build:
     name: Build
-    runs-on: ${{ matrix.os }}
-
-    strategy:
-      matrix:
-        os: [windows-latest]
-
-    timeout-minutes: 5
-    if: >-
-      github.event_name == 'push' || github.event_name == 'pull_request' || 
-      (github.event.comment.body == '/runsim' && (github.actor == 'allthatjazzleo' || github.actor == 'tomtau' || 
-      github.actor == 'lezzokafka' || github.actor == 'yihuang' || github.actor == 'calvinaco' || 
-      github.actor == 'CeruleanAtMonaco' || github.actor == 'devashishdxt' || github.actor == 'leejw51crypto' 
-      || github.actor == 'cdc-Hitesh'))
+    runs-on: windows-latest
     steps:
-      - name: Comment PR for Sim test started
-        uses: allthatjazzleo/actions-pull-request-add-comment@master
-        if: github.event_name == 'issue_comment'
-        with:
-          message: |
-            Simulation tests started and triggered by `/runsim`. 
-            Will update here when it succeeds or fails.
-            Can further check progress [here](https://github.com/${{ github.repository }}/actions/runs/${{ github.run_id }})
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Github API Request
-        id: request
-        uses: octokit/request-action@v2.0.0
-        if: github.event_name == 'issue_comment'
-        with:
-          route: ${{ github.event.issue.pull_request.url }}
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      - name: Get Comment PR informations
-        id: pr_data
-        if: github.event_name == 'issue_comment'
-        run: |
-          echo "::set-output name=branch::${{ fromJson(steps.request.outputs.data).head.ref }}"
-          echo "::set-output name=repo_name::${{ fromJson(steps.request.outputs.data).head.repo.full_name }}"
       - name: Set up Go
         uses: actions/setup-go@v2
         with:
           go-version: 1.16.1
-      - name: Checkout Comment PR Branch
-        uses: actions/checkout@v2
-        with:
-          submodules: true
-          token: ${{ secrets.GITHUB_TOKEN }}
-          repository: ${{ steps.pr_data.outputs.repo_name }}
-          ref: ${{ steps.pr_data.outputs.branch }}
       - name: Normal check out code
         uses: actions/checkout@v2
         with:
           submodules: true
-      - uses: technote-space/get-diff-action@v3
-        with:
-          SUFFIX_FILTER: |
-            .go
-            .mod
-            .sum
-          SET_ENV_NAME_INSERTIONS: 1
-          SET_ENV_NAME_LINES: 1
       - name: Set GOBIN
         run: |
           echo "$(go env GOPATH)/bin" >> $GITHUB_PATH
@@ -80,6 +27,3 @@ jobs:
         if: |
           startsWith(matrix.os, 'windows')
         run: cd && dir && makewin.bat
-      - name: test
-        run: make test
-        if: "env.GIT_DIFF != '' || github.event_name == 'issue_comment'"
