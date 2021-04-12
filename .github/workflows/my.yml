@@ -56,7 +56,6 @@ jobs:
           go-version: 1.16.1
       - name: Checkout Comment PR Branch
         uses: actions/checkout@v2
-        if: github.event_name == 'issue_comment'
         with:
           submodules: true
           token: ${{ secrets.GITHUB_TOKEN }}
