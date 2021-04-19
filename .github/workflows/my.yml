@@ -28,6 +28,6 @@ jobs:
           echo $Env:GITHUB_WORKSPACE  "github workspace"
       - name: buildwindows
         run: |
-          cd
+          cd $Env:GITHUB_WORKSPACE
           dir
           makewin.bat
