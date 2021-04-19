@@ -30,4 +30,4 @@ jobs:
         run: |
           cd $Env:GITHUB_WORKSPACE
           dir
-          makewin.bat
+          .\makewin.bat
