@@ -1,4 +1,5 @@
 #!/bin/bash
+echo "setup"
 rm -rf $HOME/.chain-maind
 . ./setup3.sh
 chain-maind unsafe-reset-all
