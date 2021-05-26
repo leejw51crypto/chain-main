@@ -6,3 +6,6 @@ export S2=$(chain-maind keys show signer2 -a --keyring-backend test)
 export T1=$(chain-maind keys show test1 -a --keyring-backend test) 
 export T2=$(chain-maind keys show test2 -a --keyring-backend test)
 
+
+echo "S1=" $S1
+echo "S2=" $S2

@@ -6,12 +6,12 @@ chain-maind unsafe-reset-all
 
 chain-maind init testnode --chain-id $CHAINID  -o
 
-chain-maind keys add validator1 --keyring-backend test
-chain-maind keys add validator2 --keyring-backend test
-chain-maind keys add signer1 --keyring-backend test
-chain-maind keys add signer2 --keyring-backend test
-chain-maind keys add test1 --keyring-backend test
-chain-maind keys add test2 --keyring-backend test
+chain-maind keys add validator1 --keyring-backend test --index 2 --recover
+chain-maind keys add validator2 --keyring-backend test --index 3 --recover
+chain-maind keys add signer1 --keyring-backend test --index 0 --recover
+chain-maind keys add signer2 --keyring-backend test --index 1 --recover
+chain-maind keys add test1 --keyring-backend test --index 4 --recover
+chain-maind keys add test2 --keyring-backend test --index 5 --recover
 
 chain-maind add-genesis-account $(chain-maind keys show validator1 -a --keyring-backend test) 2000000000000000000000000000000000cro 
 chain-maind add-genesis-account $(chain-maind keys show validator2 -a --keyring-backend test) 2000000000000000000000000000000000cro
