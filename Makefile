@@ -158,6 +158,9 @@ nix-integration-test: check-network make-proto
 nix-integration-test2: check-network make-proto
 	nix run -f ./default2.nix run-integration-tests -c run-integration-tests	
 
+nix-integration-test3: check-network make-proto
+	nix run -f ./default3.nix run-integration-tests -c run-integration-tests		
+
 nix-build-%: check-network check-os
 	@if [ -e ~/.nix/remote-build-env ]; then \
 		. ~/.nix/remote-build-env; \
