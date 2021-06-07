@@ -153,7 +153,10 @@ make-proto:
 ###############################################################################
 # nix installation: https://nixos.org/download.html
 nix-integration-test: check-network make-proto
-	nix run -f ./. run-integration-tests -c run-integration-tests
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests
+
+nix-integration-test2: check-network make-proto
+	nix run -f ./default2.nix run-integration-tests -c run-integration-tests	
 
 nix-build-%: check-network check-os
 	@if [ -e ~/.nix/remote-build-env ]; then \
