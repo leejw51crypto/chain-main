@@ -108,7 +108,7 @@ jobs:
       - name: Run integration tests
         run: make nix-integration-test4
 
-test5:
+  test5:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
