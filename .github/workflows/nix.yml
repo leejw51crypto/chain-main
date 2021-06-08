@@ -122,6 +122,20 @@ jobs:
           skipPush: ${{github.event_name == 'pull_request'}}
       - name: Run integration tests
         run: make nix-integration-test5
+  test6:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true
+      - uses: cachix/install-nix-action@v12
+      - uses: cachix/cachix-action@v8
+        with:
+          name: crypto-com
+          signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
+          skipPush: ${{github.event_name == 'pull_request'}}
+      - name: Run integration tests
+        run: make nix-integration-test6
 
   test_coverage:
     runs-on: ubuntu-latest
