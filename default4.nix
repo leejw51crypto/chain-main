@@ -103,7 +103,7 @@ rec {
     hermes
   ];
 
-  # sources for integration tests
+   # sources for integration tests
   # it needs the chain source code to build patched binaries on the fly
   tests_src = lib.sourceByRegex ./. ([
     "^integration_tests$"
@@ -116,7 +116,7 @@ rec {
     "^nix/.*"
     "^default.nix$"
   ] ++ src_regexes);
-
+  
   # an env which can run integration tests
   ci-env = pkgs.buildEnv {
     name = "ci-env";
@@ -133,9 +133,16 @@ rec {
     set -e
     export PATH=${ci-env}/bin:$PATH
     export TESTS=${tests_src}/integration_tests
-    pytest -v -n 3 -m 'not ledger and not upgrade and not slow' --dist loadscope $TESTS
+    # pytest -v -n 3 -m 'not ledger and not upgrade' --dist loadscope $TESTS
     # pytest -v -m upgrade $TESTS
     # pytest -v -m ledger $TESTS
+    pytest -v -m slow $TESTS
+    echo "###############################################"
+    echo "###############################################"
+    echo $PATH
+    echo "###############################################"
+    echo "###############################################"
+    echo $TESTS
   '';
 
   ci-shell = pkgs.mkShell {
