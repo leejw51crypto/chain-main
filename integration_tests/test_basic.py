@@ -1,4 +1,7 @@
 from .utils import wait_for_block
+import pytest
+
+pytestmark = pytest.mark.normal
 
 
 def test_simple(cluster):

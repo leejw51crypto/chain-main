@@ -15,6 +15,9 @@ from .utils import (
 )
 
 
+pytestmark = pytest.mark.normal
+
+
 @pytest.fixture(scope="module")
 def cluster(worker_index, pytestconfig, tmp_path_factory):
     "override cluster fixture for this test module"
