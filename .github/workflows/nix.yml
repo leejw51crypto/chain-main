@@ -76,7 +76,7 @@ jobs:
           signingKey: "${{ secrets.CACHIX_SIGNING_KEY }}"
           skipPush: ${{github.event_name == 'pull_request'}}
       - name: Run integration tests
-        run: make nix-integration-upgrade
+        run: make nix-integration-test-upgrade
 
   test-ledger:
     runs-on: ubuntu-latest
@@ -122,6 +122,7 @@ jobs:
           skipPush: ${{github.event_name == 'pull_request'}}
       - name: Run integration tests
         run: make nix-integration-test-ibc
+
   test-byzantine:
     runs-on: ubuntu-latest
     steps:
