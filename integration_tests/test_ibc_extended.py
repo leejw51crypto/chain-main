@@ -8,6 +8,7 @@ import pytest
 from pystarport import ports
 
 from .utils import cluster_fixture, wait_for_block, wait_for_port
+
 pytestmark = pytest.mark.ibc
 
 

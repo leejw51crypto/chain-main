@@ -1,10 +1,10 @@
 import json
 
+import pytest
 from pystarport import ports
 from pystarport.proto_python.api_util import ApiUtil
 
 from .utils import wait_for_new_blocks
-import pytest
 
 pytestmark = pytest.mark.normal
 

@@ -1,5 +1,6 @@
-from .utils import wait_for_block
 import pytest
+
+from .utils import wait_for_block
 
 pytestmark = pytest.mark.normal
 

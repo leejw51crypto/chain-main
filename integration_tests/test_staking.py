@@ -14,7 +14,6 @@ from .utils import (
     wait_for_port,
 )
 
-
 pytestmark = pytest.mark.normal
 
 
