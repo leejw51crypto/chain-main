@@ -153,7 +153,7 @@ make-proto:
 ###############################################################################
 # nix installation: https://nixos.org/download.html
 nix-integration-test: check-network make-proto
-	nix run -f ./default.nix run-integration-tests -c run-integration-tests
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -n 3 -m 'not ledger and not upgrade and not slow and not ibc and not byzantine and not gov' --dist loadscope"
 
 nix-integration-test2: check-network make-proto
 	nix run -f ./default2.nix run-integration-tests -c run-integration-tests	
@@ -171,7 +171,7 @@ nix-integration-test6: check-network make-proto
 	nix run -f ./default6.nix run-integration-tests -c run-integration-tests
 
 nix-integration-test7: check-network make-proto
-	nix run -f ./default7.nix run-integration-tests -c run-integration-tests "pytest -v -m gov"
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m gov"
 
 
 nix-build-%: check-network check-os
