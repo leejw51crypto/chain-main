@@ -145,8 +145,8 @@ rec {
     echo "###############################################"
     echo "###############################################"
     echo "argument~~~~~~~~~~~~~~~~~~~~~"
-    echo "print argument="$1
-    $1
+    echo "command="$1 $TESTS
+    $1 $TESTS
     echo $TESTS
   '';
 
