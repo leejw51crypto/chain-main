@@ -144,9 +144,9 @@ rec {
     echo $PATH
     echo "###############################################"
     echo "###############################################"
-    echo "mycommand~~~~~~~~~~~~~~~~~~~~~"
-    echo ${mycommand}
-    ${mycommand}
+    echo "argument~~~~~~~~~~~~~~~~~~~~~"
+    echo "print argument="$1
+    $1
     echo $TESTS
   '';
 
