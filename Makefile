@@ -155,22 +155,22 @@ make-proto:
 nix-integration-test: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m normal"
 
-nix-integration-test2: check-network make-proto
+nix-integration-test-upgrade: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m upgrade"	
 
-nix-integration-test3: check-network make-proto
+nix-integration-test-ledger: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m ledger"		
 
-nix-integration-test4: check-network make-proto
+nix-integration-test-slow: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m slow"
 
-nix-integration-test5: check-network make-proto
+nix-integration-test-ibc: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m ibc"
 
-nix-integration-test6: check-network make-proto
+nix-integration-test-byzantine: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m byzantine"
 
-nix-integration-test7: check-network make-proto
+nix-integration-test-gov: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m gov"
 
 
