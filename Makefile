@@ -153,22 +153,22 @@ make-proto:
 ###############################################################################
 # nix installation: https://nixos.org/download.html
 nix-integration-test: check-network make-proto
-	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -n 3 -m 'not ledger and not upgrade and not slow and not ibc and not byzantine and not gov' --dist loadscope"
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m normal"
 
 nix-integration-test2: check-network make-proto
-	nix run -f ./default2.nix run-integration-tests -c run-integration-tests	
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m upgrade"	
 
 nix-integration-test3: check-network make-proto
-	nix run -f ./default3.nix run-integration-tests -c run-integration-tests		
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m ledger"		
 
 nix-integration-test4: check-network make-proto
-	nix run -f ./default4.nix run-integration-tests -c run-integration-tests
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m slow"
 
 nix-integration-test5: check-network make-proto
-	nix run -f ./default5.nix run-integration-tests -c run-integration-tests
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m ibc"
 
 nix-integration-test6: check-network make-proto
-	nix run -f ./default6.nix run-integration-tests -c run-integration-tests
+	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m byzantine"
 
 nix-integration-test7: check-network make-proto
 	nix run -f ./default.nix run-integration-tests -c run-integration-tests "pytest -v -m gov"
