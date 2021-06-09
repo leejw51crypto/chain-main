@@ -153,7 +153,7 @@ jobs:
       - name: Run integration tests
         run: make nix-integration-test-gov
 
-  test_coverage:
+  test-coverage:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
