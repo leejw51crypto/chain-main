@@ -141,7 +141,7 @@ rec {
     echo "PATH="$PATH
     echo "TESTS="$TESTS
     echo "COMMAND="$1 $TESTS
-    $1 $TESTS
+    $1 ./integration_tests/
   '';
 
   ci-shell = pkgs.mkShell {
