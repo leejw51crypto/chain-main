@@ -1,4 +1,4 @@
-{ system ? builtins.currentSystem, pkgs ? import ./nix { inherit system; }, commit ? "" }:
+{ system ? builtins.currentSystem, pkgs ? import ./nix { inherit system; }, commit ? "" , mycommand ? ""}:
 let
   src_regexes = [
     "^x$"
@@ -138,12 +138,14 @@ rec {
     # pytest -v -m ledger $TESTS
     # pytest -v -m slow $TESTS
     # pytest -v -m byzantine $TESTS
-    pytest -v -m gov $TESTS
+    #pytest -v -m gov $TESTS
     echo "###############################################"
     echo "###############################################"
     echo $PATH
     echo "###############################################"
     echo "###############################################"
+    echo "mycommand~~~~~~~~~~~~~~~~~~~~~"
+    echo ${mycommand}
     echo $TESTS
   '';
 
