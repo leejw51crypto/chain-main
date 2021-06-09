@@ -171,7 +171,7 @@ nix-integration-test6: check-network make-proto
 	nix run -f ./default6.nix run-integration-tests -c run-integration-tests
 
 nix-integration-test7: check-network make-proto
-	nix run -f ./default7.nix run-integration-tests -c run-integration-tests --arg mycommand "sun................."
+	nix run -f ./default7.nix run-integration-tests -c run-integration-tests --arg mycommand "pytest -v -m gov $TESTS"
 
 
 nix-build-%: check-network check-os

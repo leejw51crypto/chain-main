@@ -146,6 +146,7 @@ rec {
     echo "###############################################"
     echo "mycommand~~~~~~~~~~~~~~~~~~~~~"
     echo ${mycommand}
+    ${mycommand}
     echo $TESTS
   '';
 
