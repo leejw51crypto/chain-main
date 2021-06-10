@@ -133,7 +133,8 @@ rec {
     set -e
     export PATH=${ci-env}/bin:$PATH
     export TESTS=${tests_src}/integration_tests
-    $1 $TESTS
+    CMD=${1:-"pytest -v"}
+    $CMD $TESTS
   '';
 
   ci-shell = pkgs.mkShell {
