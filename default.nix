@@ -133,7 +133,8 @@ rec {
     set -e
     export PATH=${ci-env}/bin:$PATH
     export TESTS=${tests_src}/integration_tests
-    CMD=${1:-"pytest -v"}
+    # check argument exists, then use it, otherwise use default
+    if [ -z ${1+x} ]; then CMD="pytest -v"; else NAME="$1"; fi
     $CMD $TESTS
   '';
 
