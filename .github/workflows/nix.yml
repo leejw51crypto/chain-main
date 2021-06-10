@@ -3,7 +3,7 @@ on:
   pull_request:
   push:
     branches:
-      - *
+      - feature/489a
       - master
       - release/**
     tags:
