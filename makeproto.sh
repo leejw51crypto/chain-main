@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ./pystarport/pystarport
-nix-shell . --run ""
+# compile protobuf files into code
+nix-shell proto.nix --run ""
