@@ -8,6 +8,6 @@ pkgs.mkShell {
     git
   ];
   shellHook = ''                                                                                       
-  cd ./pystarport/pystarport
+  cd ./pystarport
   ./convert.sh                                                                                          '';
 }
